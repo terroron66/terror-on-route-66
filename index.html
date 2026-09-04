@@ -116,28 +116,33 @@
         }
 
 
-        /* Subtle atmospheric glow behind video */
+        /* Red atmospheric glow */
 
         .video-hero::before {
             content: "";
             position: absolute;
+
             width: 700px;
             height: 700px;
 
-            background: radial-gradient(
-                circle,
-                rgba(120,0,0,.35),
-                rgba(0,0,0,0) 70%
-            );
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(120,0,0,.35),
+                    rgba(0,0,0,0) 70%
+                );
 
             z-index: 0;
         }
 
 
-        /* Main portrait video */
+        /* =========================
+           MAIN VIDEO
+           ========================= */
 
         .video-container {
             position: relative;
+
             z-index: 1;
 
             height: 74vh;
@@ -147,17 +152,19 @@
 
             background: #000;
 
+            overflow: hidden;
+
             box-shadow:
                 0 0 35px rgba(0,0,0,.9),
                 0 0 80px rgba(120,0,0,.25);
-
-            overflow: hidden;
         }
 
         .video-container iframe {
             width: 100%;
             height: 100%;
+
             border: none;
+
             display: block;
         }
 
@@ -168,16 +175,18 @@
 
         .video-overlay {
             position: absolute;
+
             inset: 0;
 
             z-index: 2;
 
-            background: linear-gradient(
-                to bottom,
-                rgba(0,0,0,0) 40%,
-                rgba(0,0,0,.10) 55%,
-                rgba(0,0,0,.88) 100%
-            );
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0) 35%,
+                    rgba(0,0,0,.15) 55%,
+                    rgba(0,0,0,.90) 100%
+                );
 
             pointer-events: none;
         }
@@ -213,9 +222,9 @@
 
             text-shadow:
                 2px 2px 5px #000,
-                0 0 12px #000;
+                0 0 15px #000;
 
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
         .video-content h2 span {
@@ -224,13 +233,54 @@
 
 
         /* =========================
-           BUTTON
+           SOUND BUTTON
+           ========================= */
+
+        .sound-button {
+            display: inline-block;
+
+            background: rgba(0,0,0,.75);
+
+            color: white;
+
+            border: 1px solid rgba(255,255,255,.5);
+
+            padding: 10px 18px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: .9rem;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            border-radius: 4px;
+
+            cursor: pointer;
+
+            margin-bottom: 8px;
+
+            transition:
+                background .2s ease,
+                border-color .2s ease;
+        }
+
+        .sound-button:hover {
+            background: #8b0000;
+            border-color: #d00000;
+        }
+
+
+        /* =========================
+           TICKET BUTTON
            ========================= */
 
         .button {
             display: inline-block;
 
             background: #a00000;
+
             color: white;
 
             padding: 15px 35px;
@@ -238,6 +288,7 @@
             text-decoration: none;
 
             font-size: 1.1rem;
+
             font-weight: bold;
 
             text-transform: uppercase;
@@ -247,7 +298,8 @@
             box-shadow:
                 0 4px 15px rgba(0,0,0,.7);
 
-            transition: background .2s ease;
+            transition:
+                background .2s ease;
         }
 
         .button:hover {
@@ -267,15 +319,21 @@
 
         section h2 {
             text-align: center;
+
             font-size: 2.5rem;
+
             margin-bottom: 20px;
+
             text-transform: uppercase;
         }
 
         section p {
             max-width: 800px;
+
             margin: 0 auto 20px;
+
             text-align: center;
+
             color: #ccc;
         }
 
@@ -286,15 +344,21 @@
 
         .tickets {
             background: #111;
+
             max-width: none;
         }
 
         .ticket-grid {
             display: flex;
+
             flex-wrap: wrap;
+
             justify-content: center;
+
             gap: 20px;
+
             max-width: 1100px;
+
             margin: auto;
         }
 
@@ -312,11 +376,13 @@
 
         .ticket h3 {
             font-size: 1.4rem;
+
             margin-bottom: 10px;
         }
 
         .price {
             font-size: 2rem;
+
             font-weight: bold;
 
             color: #e00000;
@@ -367,12 +433,14 @@
 
             nav a {
                 display: inline-block;
+
                 margin: 5px 6px;
+
                 font-size: .9rem;
             }
 
 
-            /* Make the video much larger on phones */
+            /* Mobile video */
 
             .video-hero {
                 height: 78vh;
@@ -385,21 +453,31 @@
             }
 
 
-            /* Overlay */
+            /* Mobile overlay */
 
             .video-content {
                 bottom: 25px;
+
                 width: 92%;
             }
 
             .video-content h2 {
                 font-size: 1.9rem;
+
                 line-height: 1.05;
-                margin-bottom: 14px;
+
+                margin-bottom: 12px;
+            }
+
+            .sound-button {
+                font-size: .8rem;
+
+                padding: 9px 14px;
             }
 
             .button {
                 padding: 13px 28px;
+
                 font-size: 1rem;
             }
 
@@ -445,7 +523,8 @@
         <div class="video-container">
 
             <iframe
-                src="https://www.youtube.com/embed/jrQEBbV6PdE?autoplay=1&mute=1&loop=1&playlist=jrQEBbV6PdE&controls=0&rel=0&playsinline=1"
+                id="terrorVideo"
+                src="https://www.youtube.com/embed/jrQEBbV6PdE?autoplay=1&mute=1&loop=1&playlist=jrQEBbV6PdE&controls=0&rel=0&playsinline=1&enablejsapi=1"
                 title="Terror On Route 66"
                 allow="autoplay; encrypted-media; picture-in-picture"
                 allowfullscreen>
@@ -465,10 +544,25 @@
                 <span>TERRORFIED</span>
             </h2>
 
+
+            <!-- SOUND CONTROL -->
+
+            <button
+                class="sound-button"
+                id="soundButton"
+                onclick="turnSoundOn()">
+                🔊 SOUND ON
+            </button>
+
+
+            <br>
+
+
+            <!-- TICKETS -->
+
             <a
                 class="button"
-                href="https://terroronroute66.simpletix.com/"
-            >
+                href="https://terroronroute66.simpletix.com/">
                 BUY TICKETS
             </a>
 
@@ -509,29 +603,62 @@
         <div class="ticket-grid">
 
             <div class="ticket">
+
                 <h3>GENERAL ADMISSION</h3>
-                <div class="price">$25</div>
-                <p>Experience the haunt.</p>
+
+                <div class="price">
+                    $25
+                </div>
+
+                <p>
+                    Experience the haunt.
+                </p>
+
             </div>
 
+
             <div class="ticket">
+
                 <h3>FAST PASS</h3>
-                <div class="price">+$15</div>
-                <p>Skip the regular line.</p>
+
+                <div class="price">
+                    +$15
+                </div>
+
+                <p>
+                    Skip the regular line.
+                </p>
+
             </div>
 
+
             <div class="ticket">
+
                 <h3>TOUCH PASS</h3>
-                <div class="price">+$15</div>
+
+                <div class="price">
+                    +$15
+                </div>
+
                 <p>
                     For guests who want a more interactive experience.
                 </p>
+
             </div>
 
+
             <div class="ticket">
+
                 <h3>RATED R</h3>
-                <div class="price">+$15</div>
-                <p>18+ adult experience.</p>
+
+                <div class="price">
+                    +$15
+                </div>
+
+                <p>
+                    18+ adult experience.
+                </p>
+
             </div>
 
         </div>
@@ -541,8 +668,7 @@
 
             <a
                 class="button"
-                href="https://terroronroute66.simpletix.com/"
-            >
+                href="https://terroronroute66.simpletix.com/">
                 GET YOUR TICKETS
             </a>
 
@@ -573,8 +699,7 @@
 
             <a
                 class="button"
-                href="https://www.facebook.com/"
-            >
+                href="https://www.facebook.com/">
                 FACEBOOK
             </a>
 
@@ -596,6 +721,45 @@
     </p>
 
 </footer>
+
+
+<!-- =========================
+     YOUTUBE SOUND CONTROL
+     ========================= -->
+
+<script>
+
+    function turnSoundOn() {
+
+        const iframe = document.getElementById("terrorVideo");
+
+        iframe.contentWindow.postMessage(
+            JSON.stringify({
+                event: "command",
+                func: "unMute",
+                args: []
+            }),
+            "*"
+        );
+
+        iframe.contentWindow.postMessage(
+            JSON.stringify({
+                event: "command",
+                func: "playVideo",
+                args: []
+            }),
+            "*"
+        );
+
+        const button = document.getElementById("soundButton");
+
+        button.innerHTML = "🔊 SOUND ON";
+
+        button.style.background = "#8b0000";
+
+    }
+
+</script>
 
 
 </body>
