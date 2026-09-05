@@ -129,7 +129,8 @@
 
         .hero-ticket-image:hover {
             transform: scale(1.05);
-            filter: drop-shadow(0 0 12px rgba(255,0,0,.7));
+            filter:
+                drop-shadow(0 0 12px rgba(255,0,0,.7));
         }
 
         .video-container {
@@ -169,7 +170,8 @@
             justify-content: center;
             cursor: pointer;
             padding: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,.7);
+            box-shadow:
+                0 2px 8px rgba(0,0,0,.7);
             transition:
                 background .2s ease,
                 transform .2s ease;
@@ -246,15 +248,40 @@
             margin-bottom: 8px;
         }
 
-        .admission-option h3 span {
-            color: #e00000;
-        }
-
         .admission-option p {
             max-width: none;
             text-align: left;
             margin: 0;
             color: #ccc;
+        }
+
+        .ticket-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1100px;
+            margin: 35px auto;
+        }
+
+        .ticket {
+            background: #1b1b1b;
+            padding: 30px;
+            width: 240px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .ticket h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e00000;
+            margin-bottom: 15px;
         }
 
         .button {
@@ -318,27 +345,30 @@
             height: auto;
             margin: 35px auto 20px;
             border: 1px solid #333;
-            box-shadow: 0 0 25px rgba(0,0,0,.8);
+            box-shadow:
+                0 0 25px rgba(0,0,0,.8);
         }
 
         .waiver-link {
             display: block;
             width: fit-content;
             margin: 20px auto 0;
-            color: #ff3333;
-            font-size: 1.1rem;
+            color: white;
+            background: #8b0000;
+            padding: 12px 25px;
+            text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
-            text-decoration: underline;
-            transition: color .2s ease;
+            border-radius: 4px;
+            transition: background .2s ease;
         }
 
         .waiver-link:hover {
-            color: white;
+            background: #d00000;
         }
 
         .schedule-section {
-            background: #050505;
+            background: #111;
         }
 
         .schedule-box {
@@ -346,63 +376,56 @@
             margin: auto;
         }
 
-        .schedule-box img {
-            display: block;
-            width: 100%;
-            max-width: 850px;
-            height: auto;
-            margin: 0 auto;
-        }
-
         .directions-section {
-            background: #111;
+            background: #080808;
         }
 
         .address {
             font-size: 1.2rem;
             color: white !important;
-            font-weight: bold;
+            margin-bottom: 30px !important;
         }
 
         .map-container {
-            max-width: 850px;
-            margin: 30px auto 20px;
-            border: 2px solid #333;
-            box-shadow: 0 0 25px rgba(0,0,0,.7);
+            max-width: 900px;
+            margin: 0 auto 30px;
+            height: 450px;
+            overflow: hidden;
+            border: 2px solid #8b0000;
         }
 
         .map-container iframe {
             width: 100%;
-            height: 350px;
+            height: 100%;
             border: 0;
-            display: block;
         }
 
         .jobs-section {
-            background: #050505;
+            background: #111;
         }
 
         .jobs-box {
-            max-width: 850px;
+            max-width: 800px;
             margin: auto;
-            background: #111;
-            border: 1px solid #333;
+            background: #181818;
+            border-left: 4px solid #8b0000;
             padding: 35px;
             text-align: center;
         }
 
         .jobs-box h3 {
+            font-family: "October Crow", Georgia, serif;
+            font-size: 2rem;
             color: #e00000;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .jobs-box p {
-            margin-bottom: 15px;
+            max-width: 700px;
         }
 
         .contact-section {
-            background: #111;
+            background: #080808;
         }
 
         .contact-logo {
@@ -414,47 +437,31 @@
         }
 
         footer {
-            background: #030303;
-            border-top: 1px solid #222;
+            background: #050505;
+            border-top: 2px solid #8b0000;
             text-align: center;
-            padding: 35px 20px;
-            color: #888;
+            padding: 30px 20px;
         }
 
-        @media (max-width: 600px) {
+        footer p {
+            color: #777;
+            margin-bottom: 5px;
+        }
 
-            header {
-                padding: 20px 15px;
-            }
+        @media (max-width: 768px) {
 
             header img {
                 width: 350px;
-                max-width: 95%;
             }
 
             .tagline {
                 font-size: 1.35rem;
-                line-height: 1.2;
-            }
-
-            nav {
-                margin-top: 15px;
             }
 
             nav a {
                 display: inline-block;
-                margin: 5px 5px;
-                font-size: .85rem;
-            }
-
-            .video-hero {
-                padding: 15px 10px 35px;
-            }
-
-            .hero-ticket-link {
-                width: 240px;
-                max-width: 80%;
-                margin-bottom: 10px;
+                margin: 5px 6px;
+                font-size: .9rem;
             }
 
             .video-container {
@@ -463,46 +470,21 @@
                 max-width: 100%;
             }
 
-            .sound-button {
-                width: 34px;
-                height: 34px;
-                right: 8px;
-                bottom: 8px;
-                font-size: 15px;
-            }
-
-            section:not(.video-hero) {
-                padding: 55px 15px;
-            }
-
             section h2 {
                 font-size: 2rem;
-            }
-
-            .admission-option {
-                padding: 20px;
-            }
-
-            .contact-logo {
-                width: 250px;
             }
 
             .warning-box {
                 padding: 25px 20px;
             }
 
-            .rules-image {
-                margin-top: 25px;
+            .contact-logo {
+                width: 250px;
             }
 
-            .map-container iframe {
-                height: 300px;
+            .map-container {
+                height: 350px;
             }
-
-            .jobs-box {
-                padding: 25px 20px;
-            }
-
         }
 
     </style>
@@ -522,7 +504,6 @@
     </p>
 
     <nav>
-
         <a href="#home">HOME</a>
         <a href="#tickets">BUY TICKETS</a>
         <a href="#warning">WARNING!</a>
@@ -530,10 +511,10 @@
         <a href="#directions">DIRECTIONS</a>
         <a href="#jobs">JOBS</a>
         <a href="#contact">CONTACT</a>
-
     </nav>
 
 </header>
+
 
 <main>
 
@@ -553,6 +534,7 @@
 
         </a>
 
+
         <div class="video-container">
 
             <iframe
@@ -562,6 +544,7 @@
                 allow="autoplay; encrypted-media; picture-in-picture"
                 allowfullscreen>
             </iframe>
+
 
             <button
                 class="sound-button"
@@ -577,9 +560,14 @@
     </section>
 
 
+    <!-- =========================
+         BUY TICKETS
+         ========================= -->
+
     <section class="tickets" id="tickets">
 
         <h2>BUY TICKETS</h2>
+
 
         <div class="ticket-intro">
 
@@ -587,9 +575,11 @@
                 Welcome to Terror On Route 66 Haunted House!
             </h3>
 
+
             <p class="warning-text">
                 ALL PARTICIPANTS ARE REQUIRED TO FILL OUT A WAIVER BEFORE ENTERING THE ATTRACTION!
             </p>
+
 
             <p class="important-text">
                 Open rain or shine unless posted otherwise on our Facebook page!
@@ -597,13 +587,13 @@
 
         </div>
 
+
         <div class="admission-list">
 
             <div class="admission-option">
 
                 <h3>
                     General Admission
-                    <span>— $25</span>
                 </h3>
 
                 <p>
@@ -613,11 +603,11 @@
 
             </div>
 
+
             <div class="admission-option">
 
                 <h3>
                     Fast Pass
-                    <span>— +$15</span>
                 </h3>
 
                 <p>
@@ -626,11 +616,11 @@
 
             </div>
 
+
             <div class="admission-option">
 
                 <h3>
                     Interactive Touch Pass
-                    <span>— +$15</span>
                 </h3>
 
                 <p>
@@ -644,11 +634,11 @@
 
             </div>
 
+
             <div class="admission-option">
 
                 <h3>
                     RATED R Pass
-                    <span>— +$15</span>
                 </h3>
 
                 <p>
@@ -667,11 +657,11 @@
 
             </div>
 
+
             <div class="admission-option">
 
                 <h3>
                     Terror Pass
-                    <span>— MOST POPULAR — SAVE $25</span>
                 </h3>
 
                 <p>
@@ -682,6 +672,7 @@
                 </p>
 
             </div>
+
 
             <div class="admission-option">
 
@@ -701,12 +692,14 @@
 
         </div>
 
+
         <div class="ticket-intro">
 
             <p class="important-text">
                 A Valid ID must be presented at check-in for all
                 INTERACTIVE TOUCH PASS and RATED R PASS participants.
             </p>
+
 
             <p>
                 Rated R Pass participants cannot enter the attraction in a group
@@ -715,10 +708,12 @@
                 Detailed ticket descriptions above.
             </p>
 
+
             <p class="warning-text">
                 All sales are final! No refunds. No exceptions.
                 Open Rain or Shine!
             </p>
+
 
             <p class="important-text">
                 Tickets are valid any open night during our 2026 Halloween Season
@@ -727,21 +722,24 @@
 
         </div>
 
+
         <div style="text-align:center; margin-top:30px;">
 
             <a
                 class="button"
                 href="https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565#smtx-click"
             >
-
                 BUY TICKETS NOW
-
             </a>
 
         </div>
 
     </section>
 
+
+    <!-- =========================
+         WARNING
+         ========================= -->
 
     <section
         class="warning-section"
@@ -750,9 +748,11 @@
 
         <h2>WARNING!</h2>
 
+
         <div class="warning-box">
 
             <h3>ENTER AT YOUR OWN RISK</h3>
+
 
             <ul>
 
@@ -802,11 +802,13 @@
 
             </ul>
 
+
             <img
                 src="rules2026.png"
                 alt="Terror On Route 66 2026 Rules"
                 class="rules-image"
             >
+
 
             <a
                 class="waiver-link"
@@ -814,9 +816,7 @@
                 target="_blank"
                 rel="noopener"
             >
-
                 VIEW 2026 WAIVER
-
             </a>
 
         </div>
@@ -824,12 +824,17 @@
     </section>
 
 
+    <!-- =========================
+         SCHEDULE
+         ========================= -->
+
     <section
         class="schedule-section"
         id="schedule"
     >
 
         <h2>SCHEDULE</h2>
+
 
         <div class="schedule-box">
 
@@ -844,6 +849,10 @@
     </section>
 
 
+    <!-- =========================
+         DIRECTIONS
+         ========================= -->
+
     <section
         class="directions-section"
         id="directions"
@@ -851,13 +860,13 @@
 
         <h2>DIRECTIONS</h2>
 
-        <p class="address">
 
+        <p class="address">
             Terror On Route 66<br>
             1143 North Service Road West<br>
             Sullivan, Missouri 63080
-
         </p>
+
 
         <div class="map-container">
 
@@ -869,6 +878,7 @@
 
         </div>
 
+
         <div style="text-align:center;">
 
             <a
@@ -877,15 +887,17 @@
                 target="_blank"
                 rel="noopener"
             >
-
                 GET DIRECTIONS
-
             </a>
 
         </div>
 
     </section>
 
+
+    <!-- =========================
+         JOBS
+         ========================= -->
 
     <section
         class="jobs-section"
@@ -894,16 +906,17 @@
 
         <h2>JOBS</h2>
 
+
         <div class="jobs-box">
 
-            <h3>
-                JOIN THE TERROR
-            </h3>
+            <h3>JOIN THE TERROR</h3>
+
 
             <p>
                 Think you've got what it takes to be part of the
                 Terror On Route 66 team?
             </p>
+
 
             <p>
                 We're looking for dedicated actors, crew members and
@@ -911,15 +924,18 @@
                 horror and creating unforgettable experiences.
             </p>
 
+
             <p>
                 If you're reliable, energetic, hardworking and ready
                 to become part of the TERROR, we'd love to have you
                 join our team!
             </p>
 
+
             <p>
                 Complete our application to get started.
             </p>
+
 
             <a
                 class="button"
@@ -927,15 +943,17 @@
                 target="_blank"
                 rel="noopener"
             >
-
                 APPLY NOW
-
             </a>
 
         </div>
 
     </section>
 
+
+    <!-- =========================
+         CONTACT
+         ========================= -->
 
     <section
         class="contact-section"
@@ -944,25 +962,27 @@
 
         <h2>CONTACT</h2>
 
+
         <img
             src="logo.png"
             alt="Terror On Route 66"
             class="contact-logo"
         >
 
-        <p>
 
+        <p>
             Terror On Route 66<br>
             1143 North Service Road West<br>
             Sullivan, Missouri 63080<br>
             <strong>(573) 617-7424</strong>
-
         </p>
+
 
         <p>
             Follow us on social media for current operating dates,
             announcements and updates.
         </p>
+
 
         <div style="text-align:center;">
 
@@ -970,9 +990,7 @@
                 class="button"
                 href="https://www.facebook.com/"
             >
-
                 FACEBOOK
-
             </a>
 
         </div>
@@ -988,6 +1006,7 @@
         © 2026 Terror On Route 66. All Rights Reserved.
     </p>
 
+
     <p>
         Get TERRORfied.
     </p>
@@ -999,6 +1018,7 @@
 
     let soundOn = false;
 
+
     function toggleSound() {
 
         const iframe =
@@ -1006,6 +1026,7 @@
 
         const button =
             document.getElementById("soundButton");
+
 
         if (!soundOn) {
 
@@ -1025,6 +1046,7 @@
 
             );
 
+
             iframe.contentWindow.postMessage(
 
                 JSON.stringify({
@@ -1041,6 +1063,7 @@
 
             );
 
+
             button.innerHTML = "🔊";
 
             button.setAttribute(
@@ -1048,7 +1071,9 @@
                 "Turn sound off"
             );
 
+
             soundOn = true;
+
 
         } else {
 
@@ -1068,12 +1093,14 @@
 
             );
 
+
             button.innerHTML = "🔇";
 
             button.setAttribute(
                 "aria-label",
                 "Turn sound on"
             );
+
 
             soundOn = false;
 
@@ -1082,6 +1109,7 @@
     }
 
 </script>
+
 
 </body>
 </html>
