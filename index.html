@@ -59,8 +59,8 @@
 
 
         header img {
-            width: 320px;
-            max-width: 90%;
+            width: 380px;
+            max-width: 95%;
             height: auto;
         }
 
@@ -471,6 +471,57 @@
 
 
         /* =========================
+           WARNING RULES IMAGE
+           ========================= */
+
+        .rules-image {
+            display: block;
+
+            width: 100%;
+            max-width: 850px;
+
+            height: auto;
+
+            margin: 35px auto 20px;
+
+            border: 1px solid #333;
+
+            box-shadow:
+                0 0 25px rgba(0,0,0,.8);
+        }
+
+
+        /* =========================
+           WAIVER LINK
+           ========================= */
+
+        .waiver-link {
+            display: block;
+
+            width: fit-content;
+
+            margin: 20px auto 0;
+
+            color: #ff3333;
+
+            font-size: 1.1rem;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            text-decoration: underline;
+
+            transition: color .2s ease;
+        }
+
+
+        .waiver-link:hover {
+            color: white;
+        }
+
+
+        /* =========================
            SCHEDULE
            ========================= */
 
@@ -598,7 +649,8 @@
 
 
             header img {
-                width: 260px;
+                width: 320px;
+                max-width: 95%;
             }
 
 
@@ -667,6 +719,11 @@
 
             .warning-box {
                 padding: 25px 20px;
+            }
+
+
+            .rules-image {
+                margin-top: 25px;
             }
 
 
@@ -1101,6 +1158,30 @@
 
             </ul>
 
+
+            <!-- 2026 RULES IMAGE -->
+
+            <img
+                src="rules2026.png"
+                alt="Terror On Route 66 2026 Rules"
+                class="rules-image"
+            >
+
+
+            <!-- WAIVER -->
+
+            <a
+                class="waiver-link"
+                href="waiver2026.png"
+                target="_blank"
+                rel="noopener"
+            >
+
+                VIEW 2026 WAIVER
+
+            </a>
+
+
         </div>
 
     </section>
@@ -1144,7 +1225,9 @@
                 class="button"
                 href="https://www.facebook.com/"
             >
+
                 FOLLOW US ON FACEBOOK
+
             </a>
 
         </div>
