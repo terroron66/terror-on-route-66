@@ -103,6 +103,7 @@
         .video-hero {
             position: relative;
             width: 100%;
+
             background:
                 radial-gradient(
                     ellipse at center,
@@ -115,7 +116,7 @@
             flex-direction: column;
             align-items: center;
 
-            padding: 35px 20px 45px;
+            padding: 25px 20px 45px;
 
             overflow: hidden;
         }
@@ -140,6 +141,48 @@
             z-index: 0;
 
             pointer-events: none;
+        }
+
+
+        /* =========================
+           BUY TICKETS IMAGE
+           ========================= */
+
+        .hero-ticket-link {
+            position: relative;
+
+            z-index: 3;
+
+            display: block;
+
+            width: 300px;
+            max-width: 80%;
+
+            margin-bottom: 12px;
+
+            text-align: center;
+        }
+
+
+        .hero-ticket-image {
+            display: block;
+
+            width: 100%;
+            height: auto;
+
+            cursor: pointer;
+
+            transition:
+                transform .2s ease,
+                filter .2s ease;
+        }
+
+
+        .hero-ticket-image:hover {
+            transform: scale(1.05);
+
+            filter:
+                drop-shadow(0 0 12px rgba(255,0,0,.7));
         }
 
 
@@ -174,41 +217,6 @@
             border: none;
 
             display: block;
-        }
-
-
-        /* =========================
-           BUY TICKETS IMAGE
-           ========================= */
-
-        .hero-ticket-image {
-            position: absolute;
-
-            top: 10px;
-            left: 50%;
-
-            transform: translateX(-50%);
-
-            z-index: 4;
-
-            width: 260px;
-            max-width: 75%;
-
-            height: auto;
-
-            cursor: pointer;
-
-            transition:
-                transform .2s ease,
-                filter .2s ease;
-        }
-
-
-        .hero-ticket-image:hover {
-            transform: translateX(-50%) scale(1.05);
-
-            filter:
-                drop-shadow(0 0 10px rgba(255,0,0,.65));
         }
 
 
@@ -400,28 +408,30 @@
             }
 
 
-            /* Larger video on phones */
+            /* Video area */
 
             .video-hero {
-                padding: 20px 10px 35px;
+                padding: 15px 10px 35px;
             }
 
+
+            /* Buy tickets image */
+
+            .hero-ticket-link {
+                width: 240px;
+                max-width: 80%;
+
+                margin-bottom: 10px;
+            }
+
+
+            /* Larger video on phones */
 
             .video-container {
                 height: 78vh;
                 width: calc(78vh * .5625);
 
                 max-width: 100%;
-            }
-
-
-            /* Buy tickets image on phones */
-
-            .hero-ticket-image {
-                top: 8px;
-
-                width: 220px;
-                max-width: 72%;
             }
 
 
@@ -484,26 +494,28 @@
     <section class="video-hero" id="home">
 
 
-        <div class="video-container">
+        <!-- BUY TICKETS IMAGE
+             DIRECTLY ABOVE VIDEO -->
 
+        <a
+            class="hero-ticket-link"
+            href="https://terroronroute66.simpletix.com/"
+            aria-label="Buy Tickets Now"
+        >
 
-            <!-- BUY TICKETS IMAGE -->
-
-            <a
-                href="https://terroronroute66.simpletix.com/"
-                aria-label="Buy Tickets Now"
+            <img
+                src="buyTicketNow.png"
+                alt="Buy Tickets Now"
+                class="hero-ticket-image"
             >
 
-                <img
-                    src="buyTicketNow.png"
-                    alt="Buy Tickets Now"
-                    class="hero-ticket-image"
-                >
-
-            </a>
+        </a>
 
 
-            <!-- YOUTUBE VIDEO -->
+        <!-- YOUTUBE VIDEO -->
+
+        <div class="video-container">
+
 
             <iframe
                 id="terrorVideo"
