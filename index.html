@@ -33,6 +33,11 @@
         }
 
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+
         body {
             background: #050505;
             color: #f5f5f5;
@@ -86,8 +91,9 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 9px;
             font-weight: bold;
+            transition: color .2s ease;
         }
 
 
@@ -122,8 +128,6 @@
         }
 
 
-        /* Atmospheric glow */
-
         .video-hero::before {
             content: "";
             position: absolute;
@@ -150,7 +154,6 @@
 
         .hero-ticket-link {
             position: relative;
-
             z-index: 3;
 
             display: block;
@@ -282,7 +285,7 @@
         section h2 {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-transform: uppercase;
         }
 
@@ -296,12 +299,72 @@
 
 
         /* =========================
-           TICKETS
+           BUY TICKETS SECTION
            ========================= */
 
         .tickets {
             background: #111;
             max-width: none !important;
+        }
+
+
+        .ticket-intro {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+
+        .ticket-intro h3 {
+            font-size: 1.35rem;
+            margin-bottom: 15px;
+        }
+
+
+        .warning-text {
+            color: #ff1a1a !important;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+
+        .important-text {
+            color: white !important;
+            font-weight: bold;
+        }
+
+
+        .admission-list {
+            max-width: 900px;
+            margin: 0 auto 35px;
+        }
+
+
+        .admission-option {
+            background: #181818;
+            border-left: 4px solid #8b0000;
+            padding: 22px 25px;
+            margin-bottom: 18px;
+        }
+
+
+        .admission-option h3 {
+            color: #fff;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+
+        .admission-option h3 span {
+            color: #e00000;
+        }
+
+
+        .admission-option p {
+            max-width: none;
+            text-align: left;
+            margin: 0;
+            color: #ccc;
         }
 
 
@@ -311,7 +374,7 @@
             justify-content: center;
             gap: 20px;
             max-width: 1100px;
-            margin: auto;
+            margin: 35px auto;
         }
 
 
@@ -353,11 +416,160 @@
             text-transform: uppercase;
             border-radius: 4px;
             margin: 8px;
+            transition:
+                background .2s ease,
+                transform .2s ease;
         }
 
 
         .button:hover {
             background: #d00000;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           WARNING SECTION
+           ========================= */
+
+        .warning-section {
+            background: #080808;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+
+
+        .warning-box {
+            max-width: 900px;
+            margin: auto;
+            background: #111;
+            border: 2px solid #8b0000;
+            padding: 35px;
+        }
+
+
+        .warning-box h3 {
+            text-align: center;
+            color: #e00000;
+            font-family: "October Crow", Georgia, serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+
+        .warning-box ul {
+            max-width: 750px;
+            margin: auto;
+            padding-left: 25px;
+        }
+
+
+        .warning-box li {
+            margin-bottom: 12px;
+            color: #ccc;
+        }
+
+
+        /* =========================
+           SCHEDULE
+           ========================= */
+
+        .schedule-section {
+            background: #050505;
+        }
+
+
+        .schedule-box {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            background: #111;
+            border: 1px solid #333;
+            padding: 35px;
+        }
+
+
+        .schedule-box h3 {
+            color: #e00000;
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+        }
+
+
+        .schedule-box p {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           DIRECTIONS
+           ========================= */
+
+        .directions-section {
+            background: #111;
+        }
+
+
+        .address {
+            font-size: 1.2rem;
+            color: white !important;
+            font-weight: bold;
+        }
+
+
+        .map-container {
+            max-width: 850px;
+            margin: 30px auto 20px;
+            border: 2px solid #333;
+            box-shadow: 0 0 25px rgba(0,0,0,.7);
+        }
+
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            display: block;
+        }
+
+
+        /* =========================
+           JOBS
+           ========================= */
+
+        .jobs-section {
+            background: #050505;
+        }
+
+
+        .jobs-box {
+            max-width: 850px;
+            margin: auto;
+            background: #111;
+            border: 1px solid #333;
+            padding: 35px;
+            text-align: center;
+        }
+
+
+        .jobs-box h3 {
+            color: #e00000;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+
+        .jobs-box p {
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           CONTACT
+           ========================= */
+
+        .contact-section {
+            background: #111;
         }
 
 
@@ -403,39 +615,29 @@
 
             nav a {
                 display: inline-block;
-                margin: 5px 6px;
-                font-size: .9rem;
+                margin: 5px 5px;
+                font-size: .85rem;
             }
 
-
-            /* Video area */
 
             .video-hero {
                 padding: 15px 10px 35px;
             }
 
 
-            /* Buy tickets image */
-
             .hero-ticket-link {
                 width: 240px;
                 max-width: 80%;
-
                 margin-bottom: 10px;
             }
 
 
-            /* Larger video on phones */
-
             .video-container {
                 height: 78vh;
                 width: calc(78vh * .5625);
-
                 max-width: 100%;
             }
 
-
-            /* Small speaker icon */
 
             .sound-button {
                 width: 34px;
@@ -445,6 +647,36 @@
                 bottom: 8px;
 
                 font-size: 15px;
+            }
+
+
+            section:not(.video-hero) {
+                padding: 55px 15px;
+            }
+
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+
+            .admission-option {
+                padding: 20px;
+            }
+
+
+            .warning-box {
+                padding: 25px 20px;
+            }
+
+
+            .map-container iframe {
+                height: 300px;
+            }
+
+
+            .jobs-box {
+                padding: 25px 20px;
             }
 
         }
@@ -473,9 +705,15 @@
 
         <a href="#home">HOME</a>
 
-        <a href="#tickets">TICKETS</a>
+        <a href="#tickets">BUY TICKETS</a>
 
-        <a href="#haunt">THE HAUNT</a>
+        <a href="#warning">WARNING!</a>
+
+        <a href="#schedule">SCHEDULE</a>
+
+        <a href="#directions">DIRECTIONS</a>
+
+        <a href="#jobs">JOBS</a>
 
         <a href="#contact">CONTACT</a>
 
@@ -488,18 +726,17 @@
 
 
     <!-- =========================
-         VIDEO HERO
+         HOME / VIDEO HERO
          ========================= -->
 
     <section class="video-hero" id="home">
 
 
-        <!-- BUY TICKETS IMAGE
-             DIRECTLY ABOVE VIDEO -->
+        <!-- BUY TICKETS IMAGE -->
 
         <a
             class="hero-ticket-link"
-            href="https://terroronroute66.simpletix.com/"
+            href="https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565#smtx-click"
             aria-label="Buy Tickets Now"
         >
 
@@ -515,7 +752,6 @@
         <!-- YOUTUBE VIDEO -->
 
         <div class="video-container">
-
 
             <iframe
                 id="terrorVideo"
@@ -539,7 +775,6 @@
 
             </button>
 
-
         </div>
 
 
@@ -547,37 +782,176 @@
 
 
     <!-- =========================
-         THE HAUNT
-         ========================= -->
-
-    <section id="haunt">
-
-        <h2>THE HAUNT</h2>
-
-
-        <p>
-            Terror On Route 66 brings an unforgettable night of horror,
-            adrenaline and entertainment to Sullivan, Missouri.
-        </p>
-
-
-        <p>
-            Enter if you dare. Once the lights go out, there's no telling
-            what—or who—you'll encounter.
-        </p>
-
-
-    </section>
-
-
-    <!-- =========================
-         TICKETS
+         BUY TICKETS
          ========================= -->
 
     <section class="tickets" id="tickets">
 
-        <h2>TICKETS</h2>
+        <h2>BUY TICKETS</h2>
 
+
+        <div class="ticket-intro">
+
+            <h3>
+                Welcome to Terror On Route 66 Haunted House!
+            </h3>
+
+
+            <p class="warning-text">
+                ALL PARTICIPANTS ARE REQUIRED TO FILL OUT A WAIVER BEFORE ENTERING THE ATTRACTION!
+            </p>
+
+
+            <p class="important-text">
+                Open rain or shine unless posted otherwise on our Facebook page!
+            </p>
+
+        </div>
+
+
+        <div class="admission-list">
+
+
+            <div class="admission-option">
+
+                <h3>
+                    General Admission
+                    <span>— $25</span>
+                </h3>
+
+                <p>
+                    General Admission is your traditional haunted house walk through
+                    with jump scares and skits. No touch involved.
+                </p>
+
+            </div>
+
+
+            <div class="admission-option">
+
+                <h3>
+                    Fast Pass
+                    <span>— +$15</span>
+                </h3>
+
+                <p>
+                    Skip the general admission line, shorter wait time.
+                </p>
+
+            </div>
+
+
+            <div class="admission-option">
+
+                <h3>
+                    Interactive Touch Pass
+                    <span>— +$15</span>
+                </h3>
+
+                <p>
+                    <strong>Ages 10+.</strong>
+                    All minors under the age of 18
+                    <strong>MUST BE ACCOMPANIED WITH AN ADULT with a valid ID!</strong>
+                    Interactive Touch Pass is kid friendly and includes light touching
+                    such as messing with hair, head, ears, arms and neck.
+                    <strong>No inappropriate or harmful touching.</strong>
+                </p>
+
+            </div>
+
+
+            <div class="admission-option">
+
+                <h3>
+                    RATED R Pass
+                    <span>— +$15</span>
+                </h3>
+
+                <p>
+                    <strong>18+ ONLY.</strong>
+                    WARNING: DARK HUMOR, ADULT LANGUAGE and INTENSE CONTACT.
+                    Rated R Pass is our most intense admission option.
+                    This is a FULL contact touch experience.
+                    Includes safe intense full contact, adult language and dark humor.
+                    <strong>No inappropriate or harmful touching.</strong>
+                    <strong>
+                        IF YOU ARE SENSITIVE OR EASILY OFFENDED THIS UPGRADE IS NOT RECOMMENDED.
+                    </strong>
+                    Rated R Pass participants cannot enter the attraction in a group
+                    with guests who do not have Rated R Passes.
+                </p>
+
+            </div>
+
+
+            <div class="admission-option">
+
+                <h3>
+                    Terror Pass
+                    <span>— MOST POPULAR — SAVE $25</span>
+                </h3>
+
+                <p>
+                    Includes:
+                    <strong>
+                        Fast Pass + Choice of Interactive Touch Pass or Rated R Pass.
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <div class="admission-option">
+
+                <h3>
+                    VIP Terror Pass
+                </h3>
+
+                <p>
+                    Includes:
+                    <strong>
+                        Front of Line + Choice of Interactive Touch Pass or Rated R Pass
+                        + VIP gift + VIP Lanyard.
+                    </strong>
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="ticket-intro">
+
+            <p class="important-text">
+                A Valid ID must be presented at check-in for all
+                INTERACTIVE TOUCH PASS and RATED R PASS participants.
+            </p>
+
+
+            <p>
+                Rated R Pass participants cannot enter the attraction in a group
+                with guests who do not have Rated R Passes.
+                General Admission and Touch Pass guests may go together.
+                Detailed ticket descriptions above.
+            </p>
+
+
+            <p class="warning-text">
+                All sales are final! No refunds. No exceptions.
+                Open Rain or Shine!
+            </p>
+
+
+            <p class="important-text">
+                Tickets are valid any open night during our 2026 Halloween Season
+                ending Nov 1!
+            </p>
+
+        </div>
+
+
+        <!-- CURRENT PRICING -->
 
         <div class="ticket-grid">
 
@@ -591,7 +965,7 @@
                 </div>
 
                 <p>
-                    Experience the haunt.
+                    Traditional haunted house experience.
                 </p>
 
             </div>
@@ -606,7 +980,7 @@
                 </div>
 
                 <p>
-                    Skip the regular line.
+                    Shorter wait time.
                 </p>
 
             </div>
@@ -621,7 +995,7 @@
                 </div>
 
                 <p>
-                    For guests who want a more interactive experience.
+                    Interactive light-touch experience.
                 </p>
 
             </div>
@@ -636,7 +1010,7 @@
                 </div>
 
                 <p>
-                    18+ adult experience.
+                    18+ full-contact experience.
                 </p>
 
             </div>
@@ -649,10 +1023,10 @@
 
             <a
                 class="button"
-                href="https://terroronroute66.simpletix.com/"
+                href="https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565#smtx-click"
             >
 
-                GET YOUR TICKETS
+                BUY TICKETS NOW
 
             </a>
 
@@ -663,23 +1037,240 @@
 
 
     <!-- =========================
-         PLAN YOUR VISIT
+         WARNING
          ========================= -->
 
-    <section id="contact">
+    <section
+        class="warning-section"
+        id="warning"
+    >
 
-        <h2>PLAN YOUR VISIT</h2>
+        <h2>WARNING!</h2>
+
+
+        <div class="warning-box">
+
+            <h3>ENTER AT YOUR OWN RISK</h3>
+
+
+            <ul>
+
+                <li>
+                    All participants must complete a waiver before entering the attraction.
+                </li>
+
+                <li>
+                    Interactive Touch Pass participants must be age 10 or older.
+                </li>
+
+                <li>
+                    Minors under 18 must be accompanied by an adult with valid ID
+                    for Interactive Touch Pass.
+                </li>
+
+                <li>
+                    Rated R Pass is strictly for guests age 18+.
+                </li>
+
+                <li>
+                    Valid ID is required at check-in for Interactive Touch Pass
+                    and Rated R Pass participants.
+                </li>
+
+                <li>
+                    Rated R participants cannot enter in a group with guests
+                    who do not have Rated R Passes.
+                </li>
+
+                <li>
+                    Rated R includes intense contact, adult language and dark humor.
+                </li>
+
+                <li>
+                    No inappropriate or harmful touching is permitted.
+                </li>
+
+                <li>
+                    If you are sensitive or easily offended, the Rated R upgrade
+                    is not recommended.
+                </li>
+
+                <li>
+                    The attraction is open rain or shine unless otherwise announced.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCHEDULE
+         ========================= -->
+
+    <section
+        class="schedule-section"
+        id="schedule"
+    >
+
+        <h2>SCHEDULE</h2>
+
+
+        <div class="schedule-box">
+
+            <h3>2026 HALLOWEEN SEASON</h3>
+
+
+            <p>
+                Tickets are valid any open night during our
+                2026 Halloween Season ending Nov 1.
+            </p>
+
+
+            <p>
+                <strong>Open Rain or Shine!</strong>
+            </p>
+
+
+            <p>
+                Watch our Facebook page for current operating dates,
+                weather announcements and schedule updates.
+            </p>
+
+
+            <a
+                class="button"
+                href="https://www.facebook.com/"
+            >
+                FOLLOW US ON FACEBOOK
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DIRECTIONS
+         ========================= -->
+
+    <section
+        class="directions-section"
+        id="directions"
+    >
+
+        <h2>DIRECTIONS</h2>
+
+
+        <p class="address">
+            Terror On Route 66<br>
+            1143 North Service Road West<br>
+            Sullivan, Missouri 63080
+        </p>
+
+
+        <div class="map-container">
+
+            <iframe
+                src="https://www.google.com/maps?q=1143+North+Service+Road+West,+Sullivan,+MO+63080&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+        <div style="text-align:center;">
+
+            <a
+                class="button"
+                href="https://www.google.com/maps/dir/?api=1&destination=1143+North+Service+Road+West,+Sullivan,+MO+63080"
+                target="_blank"
+                rel="noopener"
+            >
+
+                GET DIRECTIONS
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         JOBS
+         ========================= -->
+
+    <section
+        class="jobs-section"
+        id="jobs"
+    >
+
+        <h2>JOBS</h2>
+
+
+        <div class="jobs-box">
+
+            <h3>JOIN THE TERROR</h3>
+
+
+            <p>
+                Think you've got what it takes to be part of the
+                Terror On Route 66 team?
+            </p>
+
+
+            <p>
+                We're always looking for reliable, energetic people
+                who love Halloween, horror and making people scream.
+            </p>
+
+
+            <p>
+                Check back for current openings and application information.
+            </p>
+
+
+            <a
+                class="button"
+                href="mailto:info@terroronroute66.com"
+            >
+
+                INQUIRE ABOUT JOBS
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+         ========================= -->
+
+    <section
+        class="contact-section"
+        id="contact"
+    >
+
+        <h2>CONTACT</h2>
 
 
         <p>
             Terror On Route 66<br>
-            Sullivan, Missouri
+            1143 North Service Road West<br>
+            Sullivan, Missouri 63080
         </p>
 
 
         <p>
             Follow us on social media for current operating dates,
-            announcements and special events.
+            announcements and updates.
         </p>
 
 
@@ -695,7 +1286,6 @@
             </a>
 
         </div>
-
 
     </section>
 
@@ -736,7 +1326,6 @@
 
 
         if (!soundOn) {
-
 
             iframe.contentWindow.postMessage(
 
@@ -784,7 +1373,6 @@
 
 
         } else {
-
 
             iframe.contentWindow.postMessage(
 
