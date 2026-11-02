@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Terror On Route 66 | Haunted House | Sullivan, Missouri</title>
@@ -74,6 +73,65 @@
 
         nav a:hover {
             color: #ff3333;
+        }
+
+        /* =========================
+           EXTREME NIGHT NEWS TICKER
+           ========================= */
+
+        .extreme-news-ticker {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            overflow: hidden;
+            background: #a00000;
+            border-top: 2px solid #ff3333;
+            border-bottom: 2px solid #ff3333;
+            padding: 12px 0;
+        }
+
+        .extreme-news-ticker a {
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+
+        .extreme-news-track {
+            display: flex;
+            width: max-content;
+            align-items: center;
+            animation: extremeTickerScroll 24s linear infinite;
+        }
+
+        .extreme-news-message {
+            flex: 0 0 auto;
+            white-space: nowrap;
+            padding-right: 65px;
+            font-family: "October Crow", Georgia, serif;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .extreme-news-message span {
+            color: #fff;
+            margin: 0 18px;
+        }
+
+        .extreme-news-ticker:hover .extreme-news-track,
+        .extreme-news-ticker:focus-within .extreme-news-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes extremeTickerScroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
         }
 
         .video-hero {
@@ -594,6 +652,16 @@
                 font-size: .9rem;
             }
 
+            .extreme-news-ticker {
+                padding: 10px 0;
+            }
+
+            .extreme-news-message {
+                font-size: 1.15rem;
+                letter-spacing: 1px;
+                padding-right: 45px;
+            }
+
             .video-container {
                 height: 78vh;
                 width: calc(78vh * .5625);
@@ -637,6 +705,16 @@
             }
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            .extreme-news-track {
+                animation: none;
+            }
+
+            .extreme-news-ticker {
+                overflow-x: auto;
+            }
+        }
+
     </style>
 </head>
 
@@ -669,6 +747,52 @@
 
 
 <main>
+
+    <!-- =========================
+         EXTREME NIGHT SCROLLING BANNER
+         ========================= -->
+
+    <div
+        class="extreme-news-ticker"
+        aria-label="Extreme Night 2026 announcement"
+    >
+
+        <a href="#extreme-night-2026">
+
+            <div class="extreme-news-track">
+
+                <div class="extreme-news-message">
+                    EXTREME NIGHT 2026
+                    <span>★</span>
+                    NOV 7, 2026
+                    <span>★</span>
+                    7:30 PM – 12 AM
+                    <span>★</span>
+                    18+ ONLY
+                    <span>★</span>
+                    CLICK FOR DETAILS
+                    <span>★</span>
+                </div>
+
+                <div class="extreme-news-message" aria-hidden="true">
+                    EXTREME NIGHT 2026
+                    <span>★</span>
+                    NOV 7, 2026
+                    <span>★</span>
+                    7:30 PM – 12 AM
+                    <span>★</span>
+                    18+ ONLY
+                    <span>★</span>
+                    CLICK FOR DETAILS
+                    <span>★</span>
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
 
     <section class="video-hero" id="home">
 
@@ -1557,6 +1681,7 @@
 
 
             soundOn = false;
+
 
         }
 
