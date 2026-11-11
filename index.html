@@ -55,7 +55,7 @@ button {
 
 header {
     background: #050505;
-    padding: 25px 20px 20px;
+    padding: 8px 12px 18px;
     text-align: center;
     border-bottom: 2px solid #8b0000;
     position: relative;
@@ -63,16 +63,18 @@ header {
 }
 
 header img {
-    width: 420px;
-    max-width: 95%;
+    display: block;
+    width: 700px;
+    max-width: 100%;
     height: auto;
+    margin: 0 auto;
 }
 
 .tagline {
     font-family: "October Crow", Georgia, serif;
     font-size: 1.8rem;
     color: white;
-    margin: 10px 0 0;
+    margin: 0;
     letter-spacing: 1px;
 }
 
@@ -81,7 +83,7 @@ header img {
 }
 
 nav {
-    margin-top: 18px;
+    margin-top: 14px;
 }
 
 nav a {
@@ -114,36 +116,14 @@ nav a:hover {
     overflow: hidden;
 }
 
-.hero-ticket-link {
-    position: relative;
-    z-index: 3;
-    display: block;
-    width: 300px;
-    max-width: 80%;
-    margin-bottom: 12px;
-    text-align: center;
-}
-
-.hero-ticket-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform .2s, filter .2s;
-}
-
-.hero-ticket-image:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 12px rgba(255,0,0,.7));
-}
-
-/* HOMEPAGE GRAPHIC */
+/* HOMEPAGE SLAUGHTERHAUS GRAPHIC */
 
 .home-slaughterhaus-container {
     position: relative;
     z-index: 2;
     width: 100%;
     max-width: 900px;
-    margin: 15px auto 45px;
+    margin: 15px auto 10px;
     padding: 20px;
     text-align: center;
 }
@@ -171,6 +151,44 @@ nav a:hover {
     margin: 0 auto;
     object-fit: contain;
     filter: drop-shadow(0 0 18px rgba(160,0,0,.35));
+}
+
+/* TICKETS COMING SOON */
+
+.tickets-coming-soon {
+    position: relative;
+    z-index: 3;
+    font-family: "October Crow", Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 5px auto 15px;
+    text-shadow: 0 0 15px rgba(180,0,0,.55);
+}
+
+/* BUY TICKETS GRAPHIC */
+
+.hero-ticket-link {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: 300px;
+    max-width: 80%;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.hero-ticket-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform .2s, filter .2s;
+}
+
+.hero-ticket-image:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(255,0,0,.7));
 }
 
 /* VIDEO */
@@ -467,7 +485,7 @@ footer p {
     margin: 0 0 5px;
 }
 
-/* CINEMATIC INTRO */
+/* INTRO */
 
 #intro {
     position: fixed;
@@ -485,8 +503,6 @@ footer p {
         #000 90%
     );
 }
-
-/* STEADY RED BACKLIGHT */
 
 #intro::before {
     content: "";
@@ -532,8 +548,6 @@ footer p {
     text-align: center;
 }
 
-/* INTRO GRAPHIC */
-
 .intro-logo-heading {
     margin: 0 auto 30px;
 }
@@ -551,8 +565,6 @@ footer p {
         drop-shadow(0 0 45px rgba(140,0,0,.4));
 }
 
-/* ENTER BUTTON */
-
 #intro #enterButton {
     display: inline-block;
     background: linear-gradient(
@@ -564,7 +576,6 @@ footer p {
     border: 1px solid #e34a4a;
     border-radius: 5px;
     padding: 20px 42px;
-
     font-family: "Terror From Midnight", serif !important;
     font-size: clamp(2rem, 5vw, 3.2rem) !important;
     font-style: normal !important;
@@ -572,12 +583,10 @@ footer p {
     letter-spacing: 1px;
     line-height: 1.25;
     text-transform: uppercase;
-
     text-shadow: none;
     box-shadow:
         0 0 20px rgba(180,0,0,.45),
         inset 0 0 15px rgba(0,0,0,.5);
-
     transition:
         background .2s,
         transform .2s,
@@ -675,8 +684,13 @@ footer p {
 /* MOBILE */
 
 @media (max-width:768px) {
+    header {
+        padding: 5px 8px 14px;
+    }
+
     header img {
-        width: 350px;
+        width: 100%;
+        max-width: 600px;
     }
 
     .tagline {
@@ -721,8 +735,17 @@ footer p {
     }
 
     .home-slaughterhaus-container {
-        margin: 10px auto 30px;
+        margin: 10px auto 5px;
         padding: 10px;
+    }
+
+    .tickets-coming-soon {
+        font-size: 1.8rem;
+        margin: 5px auto 12px;
+    }
+
+    .hero-ticket-link {
+        margin-bottom: 30px;
     }
 }
 
@@ -740,8 +763,6 @@ footer p {
 </head>
 
 <body class="intro-active">
-
-<!-- SLEIGH BELLS AUDIO -->
 
 <audio
     id="bellsAudio"
@@ -772,9 +793,7 @@ footer p {
 
         </h1>
 
-        <button
-            id="enterButton"
-            type="button">
+        <button id="enterButton" type="button">
             ENTER
         </button>
 
@@ -833,7 +852,24 @@ footer p {
 
 <section class="video-hero" id="home">
 
-    <!-- TICKET GRAPHIC -->
+    <!-- SLAUGHTERHAUS GRAPHIC -->
+
+    <div class="home-slaughterhaus-container">
+
+        <img
+            src="slaughterhaus2.png"
+            alt="Santa's Slaughterhaus"
+            class="home-slaughterhaus-logo">
+
+    </div>
+
+    <!-- COMING SOON TEXT -->
+
+    <div class="tickets-coming-soon">
+        Tickets Coming Soon...
+    </div>
+
+    <!-- BUY TICKETS BUTTON -->
 
     <a class="hero-ticket-link"
        href="#tickets"
@@ -845,17 +881,6 @@ footer p {
             class="hero-ticket-image">
 
     </a>
-
-    <!-- SLAUGHTERHAUS HOMEPAGE GRAPHIC -->
-
-    <div class="home-slaughterhaus-container">
-
-        <img
-            src="slaughterhaus2.png"
-            alt="Santa's Slaughterhaus"
-            class="home-slaughterhaus-logo">
-
-    </div>
 
     <!-- VIDEO -->
 
