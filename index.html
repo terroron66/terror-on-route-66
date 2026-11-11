@@ -4,10 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Terror On Route 66 | Santa's Slaughterhaus | Sullivan, Missouri</title>
+
 <meta name="description" content="Santa's Slaughterhaus at Terror On Route 66 in Sullivan, Missouri.">
 
 <style>
+
+/* CUSTOM FONT */
+
 @font-face {
     font-family: 'October Crow';
     src: url('October%20Crow.ttf') format('truetype');
@@ -36,6 +41,8 @@ body.intro-active {
 a {
     color: inherit;
 }
+
+/* HEADER */
 
 header {
     background: #050505;
@@ -78,6 +85,8 @@ nav a {
 nav a:hover {
     color: #ff3333;
 }
+
+/* HOME VIDEO */
 
 .video-hero {
     position: relative;
@@ -169,6 +178,8 @@ nav a:hover {
     background: #8b0000;
 }
 
+/* SOCIAL MEDIA */
+
 .social-media-row {
     position: relative;
     z-index: 3;
@@ -194,6 +205,8 @@ nav a:hover {
     object-fit: contain;
 }
 
+/* GENERAL SECTIONS */
+
 section:not(.video-hero) {
     padding: 70px 20px;
     max-width: 1100px;
@@ -216,6 +229,8 @@ section p {
     text-align: center;
     color: #ccc;
 }
+
+/* TICKETS */
 
 .tickets {
     background: #111;
@@ -288,6 +303,8 @@ section p {
     transform: translateY(-2px);
 }
 
+/* WARNING */
+
 .warning-section {
     background: #080808;
     border-top: 1px solid #222;
@@ -346,6 +363,8 @@ section p {
 .waiver-link:hover {
     background: #d00000;
 }
+
+/* OTHER SECTIONS */
 
 .schedule-section,
 .jobs-section {
@@ -419,7 +438,7 @@ footer p {
     margin: 0 0 5px;
 }
 
-/* CINEMATIC CHRISTMAS HORROR INTRO */
+/* CINEMATIC INTRO */
 
 #intro {
     position: fixed;
@@ -443,6 +462,10 @@ footer p {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+#intro[hidden] {
+    display: none;
 }
 
 #intro::before {
@@ -487,20 +510,39 @@ footer p {
     font-size: .8rem;
 }
 
-.intro-title {
-    font-family: 'October Crow', Georgia, serif;
-    font-size: clamp(3.1rem,10vw,7.2rem);
-    line-height: 1.04;
-    margin: 20px 0;
-    color: #e6edf3;
-    text-shadow:
-        0 5px 0 #490000,
-        0 0 28px #a00;
+/* NEW SLAUGHTERHAUS GRAPHIC */
+
+.intro-logo-heading {
+    margin: 15px auto 25px;
+    text-align: center;
 }
 
-.intro-title span {
+.intro-logo {
     display: block;
-    color: #c80a0a;
+    width: 100%;
+    max-width: 680px;
+    max-height: 55vh;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    filter: drop-shadow(
+        0 0 22px rgba(180,0,0,.45)
+    );
+    animation: slaughterhausGlow 3s ease-in-out infinite;
+}
+
+@keyframes slaughterhausGlow {
+    0%, 100% {
+        filter: drop-shadow(
+            0 0 12px rgba(150,0,0,.35)
+        );
+    }
+
+    50% {
+        filter: drop-shadow(
+            0 0 32px rgba(220,0,0,.75)
+        );
+    }
 }
 
 .intro-copy {
@@ -580,7 +622,7 @@ footer p {
     }
 }
 
-/* ANIMATED SNOWFALL */
+/* SNOWFALL */
 
 .snow-layer {
     position: fixed;
@@ -625,9 +667,11 @@ footer p {
     opacity: .55;
 }
 
+/* INTRO SOUND TOGGLE */
+
 #soundToggle {
     position: fixed;
-    z-index: 20;
+    z-index: 10001;
     right: 14px;
     bottom: 14px;
     border: 1px solid #6c6c6c;
@@ -639,11 +683,10 @@ footer p {
     font-weight: bold;
 }
 
-#soundToggle:focus-visible {
-    outline: 2px solid white;
-}
+/* MOBILE */
 
 @media(max-width:768px) {
+
     header img {
         width: 350px;
     }
@@ -687,9 +730,15 @@ footer p {
     .intro-copy {
         font-size: .95rem;
     }
+
+    .intro-logo {
+        max-width: 95%;
+        max-height: 45vh;
+    }
 }
 
 @media(prefers-reduced-motion:reduce) {
+
     html {
         scroll-behavior: auto;
     }
@@ -699,7 +748,8 @@ footer p {
         display: none;
     }
 
-    #intro::before {
+    #intro::before,
+    .intro-logo {
         animation: none;
     }
 
@@ -711,12 +761,13 @@ footer p {
         transition: none;
     }
 }
+
 </style>
 </head>
 
 <body class="intro-active">
 
-<!-- CHRISTMAS SOUND EFFECTS -->
+<!-- AUDIO FILES -->
 
 <audio
     id="bellsAudio"
@@ -730,7 +781,7 @@ footer p {
     preload="auto">
 </audio>
 
-<!-- CINEMATIC INTRO -->
+<!-- CHRISTMAS HORROR INTRO -->
 
 <div
     id="intro"
@@ -755,9 +806,17 @@ footer p {
             Terror On Route 66 presents
         </div>
 
-        <h1 class="intro-title" id="introTitle">
-            Santa's
-            <span>Slaughterhaus</span>
+        <!-- CUSTOM SLAUGHTERHAUS LOGO -->
+
+        <h1
+            id="introTitle"
+            class="intro-logo-heading">
+
+            <img
+                src="slaughterhaus.png"
+                alt="Terror On Route 66 presents Santa's Slaughterhaus"
+                class="intro-logo">
+
         </h1>
 
         <p class="intro-copy">
@@ -788,9 +847,10 @@ footer p {
         </div>
 
     </div>
+
 </div>
 
-<!-- CONTINUOUS WEBSITE SNOW -->
+<!-- CONTINUOUS SNOW -->
 
 <div
     class="snow-layer"
@@ -801,11 +861,11 @@ footer p {
 <button
     type="button"
     id="soundToggle"
-    aria-label="Turn intro sound on or off">
+    aria-label="Mute intro sound">
     🔊 Intro sound: ON
 </button>
 
-<!-- WEBSITE HEADER -->
+<!-- HEADER -->
 
 <header>
 
@@ -1374,7 +1434,9 @@ footer p {
 
         <a
             class="button"
-            href="https://www.facebook.com/">
+            href="https://www.facebook.com/TerrorOnRoute66/"
+            target="_blank"
+            rel="noopener">
             FACEBOOK
         </a>
 
@@ -1393,7 +1455,7 @@ footer p {
     <p>Get TERRORfied.</p>
 </footer>
 
-<!-- CHRISTMAS INTRO JAVASCRIPT -->
+<!-- JAVASCRIPT -->
 
 <script>
 
@@ -1411,7 +1473,7 @@ let introTimer = null;
 let laughTimer = null;
 let soundOn = false;
 
-/* CREATE SNOWFLAKES */
+/* GENERATE SNOWFLAKES */
 
 function snow(container, count) {
 
@@ -1459,7 +1521,7 @@ function snow(container, count) {
     container.appendChild(fragment);
 }
 
-/* ACTIVATE SNOW */
+/* START SNOW */
 
 if (!window.matchMedia(
     '(prefers-reduced-motion: reduce)'
@@ -1476,7 +1538,7 @@ if (!window.matchMedia(
     );
 }
 
-/* STOP INTRO AUDIO */
+/* STOP AUDIO */
 
 function stopIntroAudio() {
 
@@ -1539,7 +1601,7 @@ function playIfPossible(audio) {
     }
 }
 
-/* START CINEMATIC INTRO */
+/* CINEMATIC ENTRANCE */
 
 function startIntro() {
 
@@ -1549,16 +1611,14 @@ function startIntro() {
 
     enterButton.disabled = true;
 
-    skipButton.textContent = 'Skip Intro';
-
     statusEl.textContent =
         'The bells are ringing...';
 
-    /* FIRST: SLEIGH BELLS */
+    /* SLEIGH BELLS */
 
     playIfPossible(bells);
 
-    /* SECOND: SCARY SANTA LAUGH */
+    /* SANTA LAUGH */
 
     laughTimer = setTimeout(() => {
 
@@ -1581,7 +1641,7 @@ function startIntro() {
     );
 }
 
-/* BUTTON CONTROLS */
+/* INTRO BUTTONS */
 
 enterButton.addEventListener(
     'click',
@@ -1593,7 +1653,7 @@ skipButton.addEventListener(
     finishIntro
 );
 
-/* MUTE INTRO SOUND */
+/* SOUND TOGGLE */
 
 soundToggle.addEventListener(
     'click',
@@ -1620,7 +1680,7 @@ soundToggle.addEventListener(
     }
 );
 
-/* ONLY SHOW INTRO ONCE PER TAB SESSION */
+/* SHOW INTRO ONCE PER TAB SESSION */
 
 let alreadySeen = false;
 
@@ -1642,7 +1702,7 @@ if (alreadySeen) {
     );
 }
 
-/* EXISTING VIDEO SOUND CONTROL */
+/* VIDEO SOUND CONTROL */
 
 function toggleSound() {
 
