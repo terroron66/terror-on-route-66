@@ -4,18 +4,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Terror On Route 66 | Santa's Slaughterhaus | Sullivan, Missouri</title>
-
+<title>Santa's Slaughterhaus | Terror On Route 66</title>
 <meta name="description" content="Santa's Slaughterhaus at Terror On Route 66 in Sullivan, Missouri.">
 
 <style>
-
-/* CUSTOM FONT */
-
 @font-face {
-    font-family: 'October Crow';
-    src: url('October%20Crow.ttf') format('truetype');
+    font-family: "October Crow";
+    src: url("October%20Crow.ttf") format("truetype");
 }
 
 * {
@@ -42,6 +37,10 @@ a {
     color: inherit;
 }
 
+button {
+    font-family: inherit;
+}
+
 /* HEADER */
 
 header {
@@ -60,11 +59,10 @@ header img {
 }
 
 .tagline {
-    font-family: 'October Crow', Georgia, serif;
+    font-family: "October Crow", Georgia, serif;
     font-size: 1.8rem;
-    color: #fff;
+    color: white;
     margin: 10px 0 0;
-    letter-spacing: 1px;
 }
 
 .tagline span {
@@ -76,9 +74,10 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    display: inline-block;
+    color: white;
     text-decoration: none;
-    margin: 0 9px;
+    margin: 5px 9px;
     font-weight: bold;
 }
 
@@ -86,35 +85,22 @@ nav a:hover {
     color: #ff3333;
 }
 
-/* HOME VIDEO */
+/* HOME */
 
 .video-hero {
     position: relative;
     width: 100%;
     background: radial-gradient(
         ellipse at center,
-        #260000 0%,
-        #0b0000 35%,
-        #050505 70%
+        #260000,
+        #0b0000 40%,
+        #050505 75%
     );
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 25px 20px 45px;
     overflow: hidden;
-}
-
-.video-hero::before {
-    content: "";
-    position: absolute;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(
-        circle,
-        rgba(120,0,0,.3),
-        transparent 70%
-    );
-    pointer-events: none;
 }
 
 .hero-ticket-link {
@@ -124,7 +110,6 @@ nav a:hover {
     width: 300px;
     max-width: 80%;
     margin-bottom: 12px;
-    text-align: center;
 }
 
 .hero-ticket-image {
@@ -136,27 +121,24 @@ nav a:hover {
 
 .hero-ticket-image:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 0 12px rgba(255,0,0,.7));
+    filter: drop-shadow(0 0 12px red);
 }
 
 .video-container {
     position: relative;
     z-index: 1;
-    height: min(76vh,780px);
-    width: min(calc(76vh * .5625),440px);
+    height: min(76vh, 780px);
+    width: min(calc(76vh * .5625), 440px);
     max-width: 100%;
-    background: #000;
+    background: black;
     overflow: hidden;
-    box-shadow:
-        0 0 35px rgba(0,0,0,.9),
-        0 0 80px rgba(120,0,0,.25);
+    box-shadow: 0 0 45px #000;
 }
 
 .video-container iframe {
     width: 100%;
     height: 100%;
     border: 0;
-    display: block;
 }
 
 .sound-button {
@@ -164,21 +146,14 @@ nav a:hover {
     right: 10px;
     bottom: 10px;
     z-index: 5;
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 1px solid #aaa;
     background: #000c;
     color: white;
-    font-size: 17px;
     cursor: pointer;
 }
-
-.sound-button:hover {
-    background: #8b0000;
-}
-
-/* SOCIAL MEDIA */
 
 .social-media-row {
     position: relative;
@@ -190,13 +165,9 @@ nav a:hover {
 }
 
 .social-media-row a {
+    display: block;
     width: 55px;
     height: 55px;
-    transition: transform .2s;
-}
-
-.social-media-row a:hover {
-    transform: scale(1.12);
 }
 
 .social-media-row img {
@@ -205,7 +176,7 @@ nav a:hover {
     object-fit: contain;
 }
 
-/* GENERAL SECTIONS */
+/* SECTIONS */
 
 section:not(.video-hero) {
     padding: 70px 20px;
@@ -216,11 +187,10 @@ section:not(.video-hero) {
 }
 
 section h2 {
-    font-family: 'October Crow', Georgia, serif;
+    font-family: "October Crow", Georgia, serif;
     text-align: center;
     font-size: 2.5rem;
     margin: 0 0 30px;
-    text-transform: uppercase;
 }
 
 section p {
@@ -229,8 +199,6 @@ section p {
     text-align: center;
     color: #ccc;
 }
-
-/* TICKETS */
 
 .tickets {
     background: #111;
@@ -245,7 +213,6 @@ section p {
 
 .ticket-intro h3 {
     font-size: 1.35rem;
-    margin-bottom: 15px;
 }
 
 .warning-text {
@@ -255,7 +222,7 @@ section p {
 }
 
 .important-text {
-    color: #fff !important;
+    color: white !important;
     font-weight: bold;
 }
 
@@ -272,8 +239,6 @@ section p {
 }
 
 .admission-option h3 {
-    color: #fff;
-    font-size: 1.25rem;
     margin: 0 0 8px;
 }
 
@@ -281,13 +246,12 @@ section p {
     max-width: none;
     text-align: left;
     margin: 0;
-    color: #ccc;
 }
 
 .button {
     display: inline-block;
     background: #a00000;
-    color: #fff;
+    color: white;
     padding: 15px 35px;
     text-decoration: none;
     font-size: 1.1rem;
@@ -295,7 +259,7 @@ section p {
     text-transform: uppercase;
     border-radius: 4px;
     margin: 8px;
-    transition: background .2s, transform .2s;
+    transition: .2s;
 }
 
 .button:hover {
@@ -303,12 +267,10 @@ section p {
     transform: translateY(-2px);
 }
 
-/* WARNING */
-
-.warning-section {
+.warning-section,
+.directions-section,
+.contact-section {
     background: #080808;
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
 }
 
 .warning-box {
@@ -322,9 +284,8 @@ section p {
 .warning-box h3 {
     text-align: center;
     color: #e00000;
-    font-family: 'October Crow', Georgia, serif;
+    font-family: "October Crow", Georgia, serif;
     font-size: 2rem;
-    margin: 0 0 20px;
 }
 
 .warning-box ul {
@@ -344,49 +305,34 @@ section p {
     max-width: 850px;
     height: auto;
     margin: 35px auto 20px;
-    border: 1px solid #333;
 }
 
 .waiver-link {
     display: block;
     width: fit-content;
-    margin: 20px auto 0;
-    color: #fff;
+    margin: 20px auto;
     background: #8b0000;
+    color: white;
     padding: 12px 25px;
     text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
     border-radius: 4px;
 }
-
-.waiver-link:hover {
-    background: #d00000;
-}
-
-/* OTHER SECTIONS */
 
 .schedule-section,
 .jobs-section {
     background: #111;
 }
 
-.directions-section,
-.contact-section {
-    background: #080808;
-}
-
 .address {
     font-size: 1.2rem;
     color: white !important;
-    margin-bottom: 30px !important;
 }
 
 .map-container {
     max-width: 900px;
     margin: 0 auto 30px;
     height: 450px;
-    overflow: hidden;
     border: 2px solid #8b0000;
 }
 
@@ -406,21 +352,15 @@ section p {
 }
 
 .jobs-box h3 {
-    font-family: 'October Crow', Georgia, serif;
+    font-family: "October Crow", Georgia, serif;
     font-size: 2rem;
     color: #e00000;
-    margin: 0 0 20px;
-}
-
-.jobs-box p {
-    max-width: 700px;
 }
 
 .contact-logo {
     display: block;
     width: 300px;
     max-width: 80%;
-    height: auto;
     margin: 0 auto 30px;
 }
 
@@ -431,14 +371,12 @@ footer {
     border-top: 2px solid #8b0000;
     text-align: center;
     padding: 30px 20px;
-}
-
-footer p {
     color: #777;
-    margin: 0 0 5px;
 }
 
-/* CINEMATIC INTRO */
+/* ==================================
+   SANTA'S SLAUGHTERHAUS INTRO
+   ================================== */
 
 #intro {
     position: fixed;
@@ -451,11 +389,15 @@ footer p {
     overflow: hidden;
     background: radial-gradient(
         ellipse at 50% 75%,
-        #300507 0%,
-        #090b10 48%,
-        #000 90%
+        #360509 0%,
+        #090b10 50%,
+        #000 95%
     );
-    transition: opacity 1.15s ease, visibility 1.15s ease;
+    opacity: 1;
+    visibility: visible;
+    transition:
+        opacity 1.1s ease,
+        visibility 1.1s ease;
 }
 
 #intro.is-hidden {
@@ -465,143 +407,138 @@ footer p {
 }
 
 #intro[hidden] {
-    display: none;
+    display: none !important;
 }
 
 #intro::before {
     content: "";
     position: absolute;
-    inset: -15%;
+    inset: -20%;
     background: radial-gradient(
         ellipse at 50% 80%,
-        rgba(205,0,0,.28),
-        transparent 58%
+        rgba(210,0,0,.32),
+        transparent 60%
     );
-    animation: introPulse 4s ease-in-out infinite;
+    animation: redPulse 4s ease-in-out infinite;
+    pointer-events: none;
 }
 
-#intro::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(180deg,transparent 65%,#000b),
-        repeating-linear-gradient(
-            0deg,
-            transparent 0 3px,
-            #0001 4px 5px
-        );
-    pointer-events: none;
+@keyframes redPulse {
+    50% {
+        opacity: .4;
+        transform: scale(1.08);
+    }
 }
 
 .intro-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    width: min(95%, 850px);
+    padding: 20px;
     text-align: center;
-    padding: 24px;
-    width: min(95%,850px);
-    text-shadow: 0 3px 18px #000;
 }
 
 .intro-kicker {
-    letter-spacing: .4em;
-    text-transform: uppercase;
-    color: #d5d9df;
     font-size: .8rem;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: #ddd;
 }
 
-/* NEW SLAUGHTERHAUS GRAPHIC */
+/* YOUR CUSTOM LOGO */
 
 .intro-logo-heading {
     margin: 15px auto 25px;
-    text-align: center;
 }
 
 .intro-logo {
     display: block;
     width: 100%;
     max-width: 680px;
-    max-height: 55vh;
+    max-height: 53vh;
     height: auto;
     object-fit: contain;
-    margin: 0 auto;
-    filter: drop-shadow(
-        0 0 22px rgba(180,0,0,.45)
-    );
+    margin: auto;
     animation: slaughterhausGlow 3s ease-in-out infinite;
 }
 
 @keyframes slaughterhausGlow {
     0%, 100% {
         filter: drop-shadow(
-            0 0 12px rgba(150,0,0,.35)
+            0 0 12px rgba(150,0,0,.4)
         );
     }
 
     50% {
         filter: drop-shadow(
-            0 0 32px rgba(220,0,0,.75)
+            0 0 32px rgba(220,0,0,.8)
         );
     }
 }
 
 .intro-copy {
     font-size: 1.1rem;
-    color: #d5d5d5;
-    margin: 0 auto 30px;
+    color: #e2e2e2;
+    margin: 0 auto 28px;
     max-width: 600px;
 }
 
 .intro-enter {
-    background: linear-gradient(#b30d0d,#640000);
-    color: #fff;
+    background: linear-gradient(
+        #b30d0d,
+        #640000
+    );
+    color: white;
     border: 1px solid #f05c5c;
     border-radius: 5px;
-    padding: 17px 32px;
-    cursor: pointer;
-    font-weight: 800;
+    padding: 17px 30px;
     font-size: 1rem;
-    letter-spacing: .1em;
+    font-weight: 800;
+    letter-spacing: .08em;
+    cursor: pointer;
     box-shadow: 0 0 24px #a0000066;
 }
 
-.intro-enter:hover,
-.intro-enter:focus-visible {
+.intro-enter:hover {
     background: #d10d0d;
+}
+
+.intro-enter:disabled {
+    opacity: .65;
+    cursor: default;
 }
 
 .intro-skip {
     display: block;
     margin: 17px auto 0;
-    border: 0;
-    background: none;
+    border: none;
+    background: transparent;
     color: #ddd;
     text-decoration: underline;
     cursor: pointer;
-    font-size: .9rem;
 }
 
 .intro-status {
     min-height: 1.5em;
-    color: #e9dede;
-    font-size: .9rem;
+    color: #eee;
     margin-top: 15px;
+    font-size: .9rem;
 }
 
 .intro-flash {
     position: absolute;
     inset: 0;
-    z-index: 4;
-    pointer-events: none;
+    z-index: 5;
     background: #b50000;
     opacity: 0;
+    pointer-events: none;
 }
 
 .intro-flash.play {
-    animation: flashHorror 1.6s ease-out forwards;
+    animation: horrorFlash 1.6s ease-out forwards;
 }
 
-@keyframes flashHorror {
+@keyframes horrorFlash {
     0%,15%,31%,45%,100% {
         opacity: 0;
     }
@@ -611,14 +548,7 @@ footer p {
     }
 
     38% {
-        opacity: .28;
-    }
-}
-
-@keyframes introPulse {
-    50% {
-        opacity: .4;
-        transform: scale(1.08);
+        opacity: .3;
     }
 }
 
@@ -630,12 +560,11 @@ footer p {
     z-index: 5;
     pointer-events: none;
     overflow: hidden;
-    contain: strict;
 }
 
-.snow-layer.intro-snow {
+.intro-snow {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 }
 
 .snowflake {
@@ -645,11 +574,12 @@ footer p {
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    background: #f7fbff;
+    background: white;
     opacity: var(--opacity);
-    box-shadow: 0 0 5px #fff7;
-    animation: snowfall var(--duration) linear var(--delay) infinite;
-    will-change: transform;
+    box-shadow: 0 0 5px #fff8;
+    animation:
+        snowfall var(--duration)
+        linear var(--delay) infinite;
 }
 
 @keyframes snowfall {
@@ -658,7 +588,11 @@ footer p {
     }
 
     to {
-        transform: translate3d(var(--drift),110vh,0);
+        transform: translate3d(
+            var(--drift),
+            110vh,
+            0
+        );
     }
 }
 
@@ -667,26 +601,25 @@ footer p {
     opacity: .55;
 }
 
-/* INTRO SOUND TOGGLE */
+/* SOUND BUTTON */
 
 #soundToggle {
     position: fixed;
     z-index: 10001;
     right: 14px;
     bottom: 14px;
-    border: 1px solid #6c6c6c;
+    border: 1px solid #777;
     border-radius: 30px;
-    background: #120909e8;
-    color: #fff;
-    padding: 9px 14px;
+    background: #120909ed;
+    color: white;
+    padding: 10px 15px;
     cursor: pointer;
     font-weight: bold;
 }
 
 /* MOBILE */
 
-@media(max-width:768px) {
-
+@media (max-width:768px) {
     header img {
         width: 350px;
     }
@@ -696,15 +629,12 @@ footer p {
     }
 
     nav a {
-        display: inline-block;
-        margin: 5px 6px;
         font-size: .9rem;
     }
 
     .video-container {
         height: 78vh;
         width: calc(78vh * .5625);
-        max-width: 100%;
     }
 
     section h2 {
@@ -715,90 +645,71 @@ footer p {
         padding: 25px 20px;
     }
 
-    .contact-logo {
-        width: 250px;
-    }
-
     .map-container {
         height: 350px;
     }
 
-    .intro-kicker {
-        letter-spacing: .2em;
+    .intro-logo {
+        max-width: 95%;
+        max-height: 43vh;
     }
 
     .intro-copy {
         font-size: .95rem;
     }
 
-    .intro-logo {
-        max-width: 95%;
-        max-height: 45vh;
+    .intro-kicker {
+        letter-spacing: .15em;
     }
 }
 
-@media(prefers-reduced-motion:reduce) {
-
-    html {
-        scroll-behavior: auto;
+@media (prefers-reduced-motion:reduce) {
+    .snowflake,
+    .intro-logo,
+    #intro::before {
+        animation: none;
     }
 
     .snowflake {
-        animation: none;
         display: none;
-    }
-
-    #intro::before,
-    .intro-logo {
-        animation: none;
-    }
-
-    .intro-flash.play {
-        animation: none;
     }
 
     #intro {
         transition: none;
     }
-}
 
+    .intro-flash.play {
+        animation: none;
+    }
+}
 </style>
 </head>
 
 <body class="intro-active">
 
-<!-- AUDIO FILES -->
+<!-- SOUND FILES -->
 
-<audio
-    id="bellsAudio"
-    src="sleigh-bells.mp3"
-    preload="auto">
-</audio>
+<audio id="bellsAudio"
+       src="sleigh-bells.mp3"
+       preload="auto"></audio>
 
-<audio
-    id="laughAudio"
-    src="scary-santa-laugh.mp3"
-    preload="auto">
-</audio>
+<audio id="laughAudio"
+       src="scary-santa-laugh.mp3"
+       preload="auto"></audio>
 
-<!-- CHRISTMAS HORROR INTRO -->
+<!-- CINEMATIC OPENING -->
 
-<div
-    id="intro"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="introTitle">
+<div id="intro"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="introTitle">
 
-    <div
-        class="snow-layer intro-snow"
-        id="introSnow"
-        aria-hidden="true">
-    </div>
+    <div id="introSnow"
+         class="snow-layer intro-snow"
+         aria-hidden="true"></div>
 
-    <div
-        class="intro-flash"
-        id="introFlash">
-    </div>
+    <div id="introFlash"
+         class="intro-flash"></div>
 
     <div class="intro-content">
 
@@ -806,72 +717,63 @@ footer p {
             Terror On Route 66 presents
         </div>
 
-        <!-- CUSTOM SLAUGHTERHAUS LOGO -->
-
-        <h1
-            id="introTitle"
+        <h1 id="introTitle"
             class="intro-logo-heading">
 
             <img
                 src="slaughterhaus.png"
-                alt="Terror On Route 66 presents Santa's Slaughterhaus"
-                class="intro-logo">
+                class="intro-logo"
+                alt="Santa's Slaughterhaus">
 
         </h1>
 
         <p class="intro-copy">
-            The snow is falling.
-            The bells are ringing.
-            Santa is coming...
-            and he isn't bringing presents.
+            The snow is falling.<br>
+            The bells are ringing.<br>
+            Santa is coming...<br>
+            And he isn't bringing presents.
         </p>
 
         <button
-            class="intro-enter"
             id="enterButton"
+            class="intro-enter"
             type="button">
             ENTER THE SLAUGHTERHAUS
         </button>
 
         <button
-            class="intro-skip"
             id="skipButton"
+            class="intro-skip"
             type="button">
             Skip Intro
         </button>
 
         <div
-            class="intro-status"
             id="introStatus"
-            aria-live="polite">
-        </div>
+            class="intro-status"
+            aria-live="polite"></div>
 
     </div>
-
 </div>
 
-<!-- CONTINUOUS SNOW -->
+<!-- WEBSITE SNOW -->
 
-<div
-    class="snow-layer"
-    id="siteSnow"
-    aria-hidden="true">
-</div>
+<div id="siteSnow"
+     class="snow-layer"
+     aria-hidden="true"></div>
 
-<button
-    type="button"
-    id="soundToggle"
-    aria-label="Mute intro sound">
+<button id="soundToggle"
+        type="button"
+        aria-label="Mute intro sound">
     🔊 Intro sound: ON
 </button>
 
-<!-- HEADER -->
+<!-- WEBSITE -->
 
 <header>
 
-    <img
-        src="logo.png"
-        alt="Terror On Route 66 Haunted House">
+    <img src="logo.png"
+         alt="Terror On Route 66">
 
     <p class="tagline">
         Missouri's Most
@@ -898,15 +800,13 @@ footer p {
 
 <section class="video-hero" id="home">
 
-    <a
-        class="hero-ticket-link"
-        href="#tickets"
-        aria-label="Buy Tickets Now">
+    <a class="hero-ticket-link"
+       href="#tickets">
 
         <img
             src="buyTicketNow.png"
-            alt="Buy Tickets Now"
-            class="hero-ticket-image">
+            class="hero-ticket-image"
+            alt="Buy Tickets Now">
 
     </a>
 
@@ -921,8 +821,8 @@ footer p {
         </iframe>
 
         <button
-            class="sound-button"
             id="soundButton"
+            class="sound-button"
             type="button"
             onclick="toggleSound()"
             aria-label="Turn video sound on">
@@ -933,41 +833,32 @@ footer p {
 
     <div class="social-media-row">
 
-        <a
-            href="https://www.facebook.com/TerrorOnRoute66/"
-            target="_blank"
-            rel="noopener"
-            aria-label="Terror On Route 66 on Facebook">
-
+        <a href="https://www.facebook.com/TerrorOnRoute66/"
+           target="_blank"
+           rel="noopener"
+           aria-label="Facebook">
             <img src="fbicon.png" alt="Facebook">
-
         </a>
 
-        <a
-            href="https://www.instagram.com/scare_stl"
-            target="_blank"
-            rel="noopener"
-            aria-label="Terror On Route 66 on Instagram">
-
+        <a href="https://www.instagram.com/scare_stl"
+           target="_blank"
+           rel="noopener"
+           aria-label="Instagram">
             <img src="instaicon.png" alt="Instagram">
-
         </a>
 
-        <a
-            href="https://www.tiktok.com/@scare_stl"
-            target="_blank"
-            rel="noopener"
-            aria-label="Terror On Route 66 on TikTok">
-
+        <a href="https://www.tiktok.com/@scare_stl"
+           target="_blank"
+           rel="noopener"
+           aria-label="TikTok">
             <img src="tticon.png" alt="TikTok">
-
         </a>
 
     </div>
 
 </section>
 
-<!-- BUY TICKETS -->
+<!-- TICKETS -->
 
 <section class="tickets" id="tickets">
 
@@ -980,8 +871,8 @@ footer p {
         </h3>
 
         <p class="warning-text">
-            ALL PARTICIPANTS ARE REQUIRED TO FILL OUT A
-            WAIVER BEFORE ENTERING THE ATTRACTION!
+            ALL PARTICIPANTS ARE REQUIRED TO FILL
+            OUT A WAIVER BEFORE ENTERING THE ATTRACTION!
         </p>
 
         <p class="important-text">
@@ -996,9 +887,9 @@ footer p {
         <div class="admission-option">
             <h3>General Admission</h3>
             <p>
-                General Admission is your traditional haunted
-                house walk through with jump scares and skits.
-                No touch involved.
+                General Admission is your traditional
+                haunted house walk through with jump
+                scares and skits. No touch involved.
             </p>
         </div>
 
@@ -1019,9 +910,10 @@ footer p {
                     MUST BE ACCOMPANIED WITH AN ADULT
                     with a valid ID!
                 </strong>
-                Interactive Touch Pass is kid friendly and
-                includes light touching such as messing with
-                hair, head, ears, arms and neck.
+                Interactive Touch Pass is kid friendly
+                and includes light touching such as
+                messing with hair, head, ears, arms
+                and neck.
                 <strong>
                     No inappropriate or harmful touching.
                 </strong>
@@ -1032,11 +924,13 @@ footer p {
             <h3>RATED R Pass</h3>
             <p>
                 <strong>18+ ONLY.</strong>
-                WARNING: DARK HUMOR, ADULT LANGUAGE and
-                INTENSE CONTACT.
+                WARNING: DARK HUMOR, ADULT LANGUAGE
+                and INTENSE CONTACT.
 
-                Rated R Pass is our most intense admission
-                option. This is a FULL contact touch experience.
+                Rated R Pass is our most intense
+                admission option.
+
+                This is a FULL contact touch experience.
 
                 Includes safe intense full contact,
                 adult language and dark humor.
@@ -1046,13 +940,13 @@ footer p {
                 </strong>
 
                 <strong>
-                    IF YOU ARE SENSITIVE OR EASILY OFFENDED
-                    THIS UPGRADE IS NOT RECOMMENDED.
+                    IF YOU ARE SENSITIVE OR EASILY
+                    OFFENDED THIS UPGRADE IS NOT RECOMMENDED.
                 </strong>
 
-                Rated R Pass participants cannot enter the
-                attraction in a group with guests who do not
-                have Rated R Passes.
+                Rated R Pass participants cannot enter
+                the attraction in a group with guests
+                who do not have Rated R Passes.
             </p>
         </div>
 
@@ -1061,8 +955,8 @@ footer p {
             <p>
                 Includes:
                 <strong>
-                    Fast Pass + Choice of Interactive Touch
-                    Pass or Rated R Pass.
+                    Fast Pass + Choice of Interactive
+                    Touch Pass or Rated R Pass.
                 </strong>
             </p>
         </div>
@@ -1084,20 +978,18 @@ footer p {
     <div class="ticket-intro">
 
         <p class="important-text">
-            A Valid ID must be presented at check-in for
-            all INTERACTIVE TOUCH PASS and RATED R PASS
-            participants.
+            A Valid ID must be presented at check-in
+            for all INTERACTIVE TOUCH PASS and
+            RATED R PASS participants.
         </p>
 
         <p>
-            Rated R Pass participants cannot enter the
-            attraction in a group with guests who do not
-            have Rated R Passes.
+            Rated R Pass participants cannot enter
+            the attraction in a group with guests
+            who do not have Rated R Passes.
 
-            General Admission and Touch Pass guests may
-            go together.
-
-            Detailed ticket descriptions above.
+            General Admission and Touch Pass guests
+            may go together.
         </p>
 
         <p class="warning-text">
@@ -1106,13 +998,13 @@ footer p {
         </p>
 
         <p class="important-text">
-            Tickets are valid any open night during our
-            2026 Halloween Season ending Nov 1!
+            Tickets are valid any open night during
+            our 2026 Halloween Season ending Nov 1!
         </p>
 
     </div>
 
-    <div style="text-align:center;margin-top:30px">
+    <div style="text-align:center">
 
         <a class="button" href="#tickets">
             BUY TICKETS NOW
@@ -1133,59 +1025,21 @@ footer p {
         <h3>ENTER AT YOUR OWN RISK</h3>
 
         <ul>
-            <li>
-                All participants must complete a waiver
-                before entering the attraction.
-            </li>
-
-            <li>
-                Interactive Touch Pass participants must
-                be age 10 or older.
-            </li>
-
-            <li>
-                Minors under 18 must be accompanied by an
-                adult with valid ID for Interactive Touch Pass.
-            </li>
-
-            <li>
-                Rated R Pass is strictly for guests age 18+.
-            </li>
-
-            <li>
-                Valid ID is required at check-in for Interactive
-                Touch Pass and Rated R Pass participants.
-            </li>
-
-            <li>
-                Rated R participants cannot enter in a group
-                with guests who do not have Rated R Passes.
-            </li>
-
-            <li>
-                Rated R includes intense contact,
-                adult language and dark humor.
-            </li>
-
-            <li>
-                No inappropriate or harmful touching
-                is permitted.
-            </li>
-
-            <li>
-                If you are sensitive or easily offended,
-                the Rated R upgrade is not recommended.
-            </li>
-
-            <li>
-                The attraction is open rain or shine
-                unless otherwise announced.
-            </li>
+            <li>All participants must complete a waiver before entering the attraction.</li>
+            <li>Interactive Touch Pass participants must be age 10 or older.</li>
+            <li>Minors under 18 must be accompanied by an adult with valid ID for Interactive Touch Pass.</li>
+            <li>Rated R Pass is strictly for guests age 18+.</li>
+            <li>Valid ID is required at check-in for Interactive Touch Pass and Rated R Pass participants.</li>
+            <li>Rated R participants cannot enter in a group with guests who do not have Rated R Passes.</li>
+            <li>Rated R includes intense contact, adult language and dark humor.</li>
+            <li>No inappropriate or harmful touching is permitted.</li>
+            <li>If you are sensitive or easily offended, the Rated R upgrade is not recommended.</li>
+            <li>The attraction is open rain or shine unless otherwise announced.</li>
         </ul>
 
         <img
             src="rules2026.png"
-            alt="Terror On Route 66 2026 Rules"
+            alt="Terror On Route 66 Rules"
             class="rules-image">
 
         <a
@@ -1223,8 +1077,8 @@ footer p {
         <iframe
             src="https://www.google.com/maps?q=1143+North+Service+Road+West,+Sullivan,+MO+63080&output=embed"
             loading="lazy"
-            allowfullscreen
-            title="Directions map">
+            title="Location Map"
+            allowfullscreen>
         </iframe>
 
     </div>
@@ -1254,26 +1108,25 @@ footer p {
         <h3>JOIN THE TERROR</h3>
 
         <p>
-            Think you've got what it takes to be part
-            of the Terror On Route 66 team?
+            Think you've got what it takes to be
+            part of the Terror On Route 66 team?
         </p>
 
         <p>
             We're looking for dedicated actors,
-            crew members and behind-the-scenes team
-            members who love Halloween, horror and
-            creating unforgettable experiences.
+            crew members and behind-the-scenes
+            team members who love Halloween,
+            horror and creating unforgettable experiences.
         </p>
 
         <p>
-            If you're reliable, energetic, hardworking
-            and ready to become part of the TERROR,
-            we'd love to have you join our team!
+            If you're reliable, energetic,
+            hardworking and ready to become part
+            of the TERROR, we'd love to have
+            you join our team!
         </p>
 
-        <p>
-            Complete our application to get started.
-        </p>
+        <p>Complete our application to get started.</p>
 
         <a
             class="button"
@@ -1298,36 +1151,35 @@ footer p {
         <h3>BECOME A VENDOR</h3>
 
         <p>
-            Thank you for your interest in being a vendor
-            at Terror On Route 66!
+            Thank you for your interest in being
+            a vendor at Terror On Route 66!
         </p>
 
         <p>
-            We are now accepting vendor applications for
-            our 2026 Season!
+            We are now accepting vendor applications
+            for our 2026 Season!
 
-            Participants are encouraged to have Halloween,
-            gothic, oddities, spooky style items but it
-            is NOT required.
+            Participants are encouraged to have
+            Halloween, gothic, oddities, spooky
+            style items but it is NOT required.
 
-            Vendor are prohibited from selling alcohol,
-            tobacco, products containing cannabis/THC
-            or illegal substances.
+            Vendors are prohibited from selling
+            alcohol, tobacco, products containing
+            cannabis/THC or illegal substances.
         </p>
 
         <p>
-            Vendor fee is $25 per weekend and a payment
-            link will be sent to the email you provide
-            in this form.
+            Vendor fee is $25 per weekend and a
+            payment link will be sent to the email
+            you provide in this form.
 
             Vendor fees are non-refundable.
 
-            If you are interested in reserving a full
-            season spot, please email us at the address
-            listed below!
+            If you are interested in reserving
+            a full season spot, please email us!
 
-            Your vendor slot will be reserved once
-            payment is received.
+            Your vendor slot will be reserved
+            once payment is received.
         </p>
 
         <p>
@@ -1337,15 +1189,12 @@ footer p {
 
             Average booth space is 10x10.
 
-            Vendors are allowed to purchase more than
-            one booth space if needed.
+            Vendors may purchase more than one booth
+            space if needed.
 
-            Vendors are responsible for their own booth
-            set up (tables, chairs, tents, additional
-            lights, etc).
-
-            There will be lighting in the vendor area
-            but additional lighting is encouraged.
+            Vendors are responsible for their own
+            booth setup including tables, chairs,
+            tents and additional lighting.
 
             We do not provide electric or water.
         </p>
@@ -1354,11 +1203,9 @@ footer p {
             <strong>FOOD VENDORS:</strong>
 
             Vendors selling food will have a different
-            vendor fee.
-
-            Please send us an email in addition to the
-            vendor application to check availability
-            and pricing.
+            vendor fee. Please email us in addition
+            to completing the vendor application
+            to check availability and pricing.
         </p>
 
         <p>
@@ -1367,32 +1214,30 @@ footer p {
         </p>
 
         <p>
-            By participating in events hosted by Terror
-            On Route 66, you agree to the following:
+            By participating in events hosted by
+            Terror On Route 66, you agree to the following:
 
-            Vendors are responsible for their own
-            property, equipment, merchandise, and any
-            risks involved.
+            Vendors are responsible for their own property,
+            equipment, merchandise, and any risks involved.
 
             Terror On Route 66 is not liable for any
             loss, theft, damage, or injury.
 
-            Vendors release Terror On Route 66 from
-            any claims, damages, or expenses that
-            may arise during the event.
+            Vendors release Terror On Route 66 from any
+            claims, damages, or expenses that may
+            arise during the event.
         </p>
 
         <p>
             Vendor questions can be directed to
-
             <a href="mailto:terror.on.66@gmail.com">
                 terror.on.66@gmail.com
             </a>.
         </p>
 
         <p>
-            Please send logo to email address above
-            for Facebook shout out.
+            Please send your logo to the email
+            address above for a Facebook shout out.
         </p>
 
         <a
@@ -1447,72 +1292,71 @@ footer p {
 </main>
 
 <footer>
-    <p>
-        © 2026 Terror On Route 66.
-        All Rights Reserved.
-    </p>
-
+    <p>© 2026 Terror On Route 66. All Rights Reserved.</p>
     <p>Get TERRORfied.</p>
 </footer>
 
-<!-- JAVASCRIPT -->
+<!-- ==================================
+     CHRISTMAS INTRO JAVASCRIPT
+     ================================== -->
 
 <script>
 
-const intro = document.getElementById('intro');
-const bells = document.getElementById('bellsAudio');
-const laugh = document.getElementById('laughAudio');
-const statusEl = document.getElementById('introStatus');
-const enterButton = document.getElementById('enterButton');
-const skipButton = document.getElementById('skipButton');
-const soundToggle = document.getElementById('soundToggle');
+const intro = document.getElementById("intro");
+const bells = document.getElementById("bellsAudio");
+const laugh = document.getElementById("laughAudio");
+const enterButton = document.getElementById("enterButton");
+const skipButton = document.getElementById("skipButton");
+const soundToggle = document.getElementById("soundToggle");
+const statusEl = document.getElementById("introStatus");
+const flash = document.getElementById("introFlash");
 
 let introSoundOn = true;
 let introStarted = false;
 let introTimer = null;
 let laughTimer = null;
-let soundOn = false;
+let videoSoundOn = false;
 
-/* GENERATE SNOWFLAKES */
+/* SNOW GENERATOR */
 
-function snow(container, count) {
+function createSnow(container, count) {
 
     const fragment = document.createDocumentFragment();
 
     for (let i = 0; i < count; i++) {
 
-        const flake = document.createElement('i');
+        const flake = document.createElement("i");
 
-        flake.className = 'snowflake';
+        flake.className = "snowflake";
 
         flake.style.setProperty(
-            '--x',
-            Math.random() * 100 + '%'
+            "--x",
+            Math.random() * 100 + "%"
         );
 
         flake.style.setProperty(
-            '--size',
-            (2 + Math.random() * 5) + 'px'
+            "--size",
+            (2 + Math.random() * 5) + "px"
         );
 
         flake.style.setProperty(
-            '--opacity',
-            (0.25 + Math.random() * .65).toFixed(2)
+            "--opacity",
+            (0.3 + Math.random() * 0.6).toFixed(2)
         );
 
         flake.style.setProperty(
-            '--duration',
-            (7 + Math.random() * 11) + 's'
+            "--duration",
+            (7 + Math.random() * 11) + "s"
         );
 
         flake.style.setProperty(
-            '--delay',
-            (-Math.random() * 18) + 's'
+            "--delay",
+            (-Math.random() * 18) + "s"
         );
 
         flake.style.setProperty(
-            '--drift',
-            (-90 + Math.random() * 180) + 'px'
+            "--drift",
+            (-90 + Math.random() * 180) + "px"
         );
 
         fragment.appendChild(flake);
@@ -1521,33 +1365,61 @@ function snow(container, count) {
     container.appendChild(fragment);
 }
 
-/* START SNOW */
+/* START SNOW AUTOMATICALLY */
 
 if (!window.matchMedia(
-    '(prefers-reduced-motion: reduce)'
+    "(prefers-reduced-motion: reduce)"
 ).matches) {
 
-    snow(
-        document.getElementById('introSnow'),
+    createSnow(
+        document.getElementById("introSnow"),
         85
     );
 
-    snow(
-        document.getElementById('siteSnow'),
+    createSnow(
+        document.getElementById("siteSnow"),
         40
     );
 }
 
-/* STOP AUDIO */
+/* STOP INTRO AUDIO */
 
 function stopIntroAudio() {
 
     [bells, laugh].forEach(audio => {
 
         audio.pause();
-        audio.currentTime = 0;
+
+        try {
+            audio.currentTime = 0;
+        } catch (e) {}
 
     });
+}
+
+/* SOUND PLAYBACK */
+
+function playSound(audio) {
+
+    if (!introSoundOn) return;
+
+    audio.volume = 0.65;
+
+    try {
+        audio.currentTime = 0;
+    } catch (e) {}
+
+    const result = audio.play();
+
+    if (result && typeof result.catch === "function") {
+
+        result.catch(() => {
+
+            statusEl.textContent =
+                "Sound unavailable. Check your MP3 files.";
+
+        });
+    }
 }
 
 /* FINISH INTRO */
@@ -1559,49 +1431,21 @@ function finishIntro() {
 
     stopIntroAudio();
 
-    intro.classList.add('is-hidden');
+    intro.classList.add("is-hidden");
 
-    document.body.classList.remove(
-        'intro-active'
-    );
+    document.body.classList.remove("intro-active");
 
-    try {
-        sessionStorage.setItem(
-            'santaIntroSeen',
-            'yes'
-        );
-    } catch (e) {}
+    /* NO SESSION STORAGE:
+       INTRO WILL REAPPEAR ON EVERY REFRESH */
 
     window.setTimeout(() => {
+
         intro.hidden = true;
-    }, 1200);
+
+    }, 1150);
 }
 
-/* PLAY AUDIO */
-
-function playIfPossible(audio) {
-
-    if (!introSoundOn) return;
-
-    audio.volume = .65;
-
-    const result = audio.play();
-
-    if (
-        result &&
-        typeof result.catch === 'function'
-    ) {
-
-        result.catch(() => {
-
-            statusEl.textContent =
-                'Audio unavailable. Check the MP3 files in your GitHub repository.';
-
-        });
-    }
-}
-
-/* CINEMATIC ENTRANCE */
+/* START INTRO */
 
 function startIntro() {
 
@@ -1612,65 +1456,66 @@ function startIntro() {
     enterButton.disabled = true;
 
     statusEl.textContent =
-        'The bells are ringing...';
+        "The bells are ringing...";
 
-    /* SLEIGH BELLS */
+    /* FIRST: SLEIGH BELLS */
 
-    playIfPossible(bells);
+    playSound(bells);
 
-    /* SANTA LAUGH */
+    /* SECOND: SANTA LAUGH */
 
-    laughTimer = setTimeout(() => {
+    laughTimer = window.setTimeout(() => {
 
         statusEl.textContent =
-            'He knows when you are screaming...';
+            "He knows when you are screaming...";
 
-        playIfPossible(laugh);
+        playSound(laugh);
 
-        document.getElementById(
-            'introFlash'
-        ).classList.add('play');
+        flash.classList.add("play");
 
     }, 1400);
 
     /* REVEAL WEBSITE */
 
-    introTimer = setTimeout(
-        finishIntro,
-        4300
-    );
+    introTimer = window.setTimeout(() => {
+
+        finishIntro();
+
+    }, 4300);
 }
 
-/* INTRO BUTTONS */
+/* ENTER BUTTON */
 
 enterButton.addEventListener(
-    'click',
+    "click",
     startIntro
 );
 
+/* SKIP BUTTON */
+
 skipButton.addEventListener(
-    'click',
+    "click",
     finishIntro
 );
 
-/* SOUND TOGGLE */
+/* INTRO SOUND TOGGLE */
 
 soundToggle.addEventListener(
-    'click',
+    "click",
     () => {
 
         introSoundOn = !introSoundOn;
 
         soundToggle.textContent =
             introSoundOn
-                ? '🔊 Intro sound: ON'
-                : '🔇 Intro sound: OFF';
+                ? "🔊 Intro sound: ON"
+                : "🔇 Intro sound: OFF";
 
         soundToggle.setAttribute(
-            'aria-label',
+            "aria-label",
             introSoundOn
-                ? 'Mute intro sound'
-                : 'Unmute intro sound'
+                ? "Mute intro sound"
+                : "Unmute intro sound"
         );
 
         if (!introSoundOn) {
@@ -1680,78 +1525,56 @@ soundToggle.addEventListener(
     }
 );
 
-/* SHOW INTRO ONCE PER TAB SESSION */
-
-let alreadySeen = false;
-
-try {
-
-    alreadySeen =
-        sessionStorage.getItem(
-            'santaIntroSeen'
-        ) === 'yes';
-
-} catch (e) {}
-
-if (alreadySeen) {
-
-    intro.hidden = true;
-
-    document.body.classList.remove(
-        'intro-active'
-    );
-}
-
-/* VIDEO SOUND CONTROL */
+/* EXISTING VIDEO SOUND */
 
 function toggleSound() {
 
     const iframe = document.getElementById(
-        'terrorVideo'
+        "terrorVideo"
     );
 
     const button = document.getElementById(
-        'soundButton'
+        "soundButton"
     );
 
     if (!iframe.contentWindow) return;
 
-    const command = soundOn
-        ? 'mute'
-        : 'unMute';
+    const command = videoSoundOn
+        ? "mute"
+        : "unMute";
 
     iframe.contentWindow.postMessage(
         JSON.stringify({
-            event: 'command',
+            event: "command",
             func: command,
             args: []
         }),
-        'https://www.youtube.com'
+        "https://www.youtube.com"
     );
 
-    if (!soundOn) {
+    if (!videoSoundOn) {
 
         iframe.contentWindow.postMessage(
             JSON.stringify({
-                event: 'command',
-                func: 'playVideo',
+                event: "command",
+                func: "playVideo",
                 args: []
             }),
-            'https://www.youtube.com'
+            "https://www.youtube.com"
         );
     }
 
-    soundOn = !soundOn;
+    videoSoundOn = !videoSoundOn;
 
-    button.textContent = soundOn
-        ? '🔊'
-        : '🔇';
+    button.textContent = videoSoundOn
+        ? "🔊"
+        : "🔇";
 
     button.setAttribute(
-        'aria-label',
-        soundOn
-            ? 'Turn video sound off'
-            : 'Turn video sound on'
+        "aria-label",
+        videoSoundOn
+            ? "Turn video sound off"
+            : "Turn video sound on"
     );
 }
 
@@ -1759,3 +1582,4 @@ function toggleSound() {
 
 </body>
 </html>
+
