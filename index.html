@@ -484,21 +484,6 @@ footer p {
         #090b10 48%,
         #000 90%
     );
-    opacity: 1;
-    visibility: visible;
-    transition:
-        opacity 1.15s ease,
-        visibility 1.15s ease;
-}
-
-#intro.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-#intro[hidden] {
-    display: none !important;
 }
 
 /* STEADY RED BACKLIGHT */
@@ -534,6 +519,11 @@ footer p {
     pointer-events: none;
 }
 
+#intro.is-hidden,
+#intro[hidden] {
+    display: none !important;
+}
+
 .intro-content {
     position: relative;
     z-index: 3;
@@ -561,7 +551,7 @@ footer p {
         drop-shadow(0 0 45px rgba(140,0,0,.4));
 }
 
-/* ENTER BUTTON - BLACK CUSTOM FONT */
+/* ENTER BUTTON */
 
 #intro #enterButton {
     display: inline-block;
@@ -605,11 +595,6 @@ footer p {
     box-shadow: 0 0 35px rgba(220,0,0,.65);
 }
 
-#intro #enterButton:disabled {
-    opacity: .65;
-    cursor: default;
-}
-
 .intro-skip {
     display: block;
     margin: 20px auto 0;
@@ -622,42 +607,6 @@ footer p {
 
 .intro-skip:hover {
     color: white;
-}
-
-.intro-status {
-    min-height: 1.5em;
-    color: #e9dede;
-    font-size: .9rem;
-    margin-top: 15px;
-}
-
-/* HORROR FLASH */
-
-.intro-flash {
-    position: absolute;
-    inset: 0;
-    z-index: 5;
-    pointer-events: none;
-    background: #b50000;
-    opacity: 0;
-}
-
-.intro-flash.play {
-    animation: flashHorror 1.6s ease-out forwards;
-}
-
-@keyframes flashHorror {
-    0%,15%,31%,45%,100% {
-        opacity: 0;
-    }
-
-    8%,24% {
-        opacity: .5;
-    }
-
-    38% {
-        opacity: .28;
-    }
 }
 
 /* SNOW */
@@ -786,31 +735,21 @@ footer p {
         animation: none;
         display: none;
     }
-
-    .intro-flash.play {
-        animation: none;
-    }
-
-    #intro {
-        transition: none;
-    }
 }
 </style>
 </head>
 
 <body class="intro-active">
 
-<!-- AUDIO -->
+<!-- SLEIGH BELLS AUDIO -->
 
-<audio id="bellsAudio"
-       src="sleigh-bells.mp3"
-       preload="auto"></audio>
+<audio
+    id="bellsAudio"
+    src="sleigh-bells.mp3"
+    preload="auto">
+</audio>
 
-<audio id="laughAudio"
-       src="scary-santa-laugh.mp3"
-       preload="auto"></audio>
-
-<!-- CINEMATIC INTRO -->
+<!-- INTRO -->
 
 <div id="intro"
      role="dialog"
@@ -820,9 +759,6 @@ footer p {
     <div id="introSnow"
          class="snow-layer intro-snow"
          aria-hidden="true"></div>
-
-    <div id="introFlash"
-         class="intro-flash"></div>
 
     <div class="intro-content">
 
@@ -837,7 +773,6 @@ footer p {
         </h1>
 
         <button
-            class="intro-enter"
             id="enterButton"
             type="button">
             ENTER
@@ -849,11 +784,6 @@ footer p {
             type="button">
             Skip Intro
         </button>
-
-        <div
-            class="intro-status"
-            id="introStatus"
-            aria-live="polite"></div>
 
     </div>
 </div>
@@ -867,7 +797,7 @@ footer p {
 <button
     id="soundToggle"
     type="button"
-    aria-label="Mute intro sound">
+    aria-label="Mute sleigh bells">
     🔊 Intro sound: ON
 </button>
 
@@ -1420,17 +1350,11 @@ footer p {
 <script>
 const intro = document.getElementById("intro");
 const bells = document.getElementById("bellsAudio");
-const laugh = document.getElementById("laughAudio");
 const enterButton = document.getElementById("enterButton");
 const skipButton = document.getElementById("skipButton");
 const soundToggle = document.getElementById("soundToggle");
-const statusEl = document.getElementById("introStatus");
-const flash = document.getElementById("introFlash");
 
 let introSoundOn = true;
-let introStarted = false;
-let introTimer = null;
-let laughTimer = null;
 let videoSoundOn = false;
 
 /* SNOW GENERATOR */
@@ -1495,80 +1419,39 @@ if (!window.matchMedia(
     );
 }
 
-/* AUDIO */
+/* OPEN HOMEPAGE IMMEDIATELY */
 
-function stopIntroAudio() {
-    [bells, laugh].forEach(audio => {
-        audio.pause();
+function openHomepage(playBells) {
+    if (playBells && introSoundOn) {
+        bells.volume = 0.65;
+        bells.currentTime = 0;
 
-        try {
-            audio.currentTime = 0;
-        } catch (e) {}
-    });
-}
+        const playback = bells.play();
 
-function playSound(audio) {
-    if (!introSoundOn) return;
-
-    audio.volume = .65;
-
-    try {
-        audio.currentTime = 0;
-    } catch (e) {}
-
-    const result = audio.play();
-
-    if (result && typeof result.catch === "function") {
-        result.catch(() => {
-            statusEl.textContent =
-                "Sound unavailable. Check your MP3 files.";
-        });
+        if (playback && typeof playback.catch === "function") {
+            playback.catch(error => {
+                console.warn(
+                    "Sleigh bells could not play:",
+                    error
+                );
+            });
+        }
     }
-}
-
-/* FINISH INTRO */
-
-function finishIntro() {
-    clearTimeout(introTimer);
-    clearTimeout(laughTimer);
-
-    stopIntroAudio();
 
     intro.classList.add("is-hidden");
+    intro.hidden = true;
     document.body.classList.remove("intro-active");
 
-    window.setTimeout(() => {
-        intro.hidden = true;
-    }, 1200);
+    window.scrollTo(0, 0);
 }
 
-/* START INTRO */
+enterButton.addEventListener("click", () => {
+    openHomepage(true);
+});
 
-function startIntro() {
-    if (introStarted) return;
-
-    introStarted = true;
-    enterButton.disabled = true;
-
-    statusEl.textContent = "The bells are ringing...";
-
-    playSound(bells);
-
-    laughTimer = window.setTimeout(() => {
-        statusEl.textContent =
-            "He knows when you are screaming...";
-
-        playSound(laugh);
-        flash.classList.add("play");
-    }, 1400);
-
-    introTimer = window.setTimeout(() => {
-        finishIntro();
-    }, 4300);
-}
-
-enterButton.addEventListener("click", startIntro);
-skipButton.addEventListener("click", finishIntro);
+skipButton.addEventListener("click", () => {
+    openHomepage(false);
+});
 
 /* SOUND TOGGLE */
 
@@ -1582,12 +1465,12 @@ soundToggle.addEventListener("click", () => {
     soundToggle.setAttribute(
         "aria-label",
         introSoundOn
-            ? "Mute intro sound"
-            : "Unmute intro sound"
+            ? "Mute sleigh bells"
+            : "Unmute sleigh bells"
     );
 
     if (!introSoundOn) {
-        stopIntroAudio();
+        bells.pause();
     }
 });
 
@@ -1637,15 +1520,7 @@ function toggleSound() {
 
 document.fonts.load(
     '32px "Terror From Midnight"'
-).then(() => {
-    if (!document.fonts.check(
-        '32px "Terror From Midnight"'
-    )) {
-        console.warn(
-            "Check that Terror From Midnight.ttf is uploaded to GitHub."
-        );
-    }
-}).catch(() => {
+).catch(() => {
     console.warn("Custom Enter button font could not be loaded.");
 });
 </script>
