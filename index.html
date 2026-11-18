@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1054,7 +1053,7 @@ footer p {
 
 <body class="intro-active">
 
-<!-- ORIGINAL CHRISTMAS INTRO -->
+<!-- ORIGINAL CHRISTMAS INTRO - SHOWS ON EVERY REFRESH -->
 
 <div
   id="intro"
@@ -1316,8 +1315,6 @@ footer p {
 
     <div class="events-overview">
 
-      <!-- MAGIC -->
-
       <div class="overview-card magic-card">
 
         <h3>
@@ -1346,8 +1343,6 @@ footer p {
         </a>
 
       </div>
-
-      <!-- MADNESS -->
 
       <div class="overview-card">
 
@@ -1515,8 +1510,6 @@ footer p {
           are admitted free.
         </p>
 
-        <!-- DIRECT NOT SO SCARY TICKET LINK -->
-
         <a
           href="https://www.simpletix.com/e/not-so-scary-christmas-terror-on-route-66-tickets-302401"
           class="button green"
@@ -1663,8 +1656,6 @@ footer p {
           before purchasing.
         </p>
 
-        <!-- DIRECT SLAUGHTERHAUS TICKET LINK -->
-
         <a
           href="https://www.simpletix.com/e/santa-slaughterhaus-a-holiday-horror-exper-tickets-301332"
           class="button"
@@ -1718,8 +1709,6 @@ footer p {
 
   </div>
 
-  <!-- SOCIAL MEDIA -->
-
   <div class="social-media-row">
 
     <a
@@ -1728,12 +1717,7 @@ footer p {
       rel="noopener noreferrer"
       aria-label="Facebook"
     >
-
-      <img
-        src="fbicon.png"
-        alt="Facebook"
-      >
-
+      <img src="fbicon.png" alt="Facebook">
     </a>
 
     <a
@@ -1742,12 +1726,7 @@ footer p {
       rel="noopener noreferrer"
       aria-label="Instagram"
     >
-
-      <img
-        src="instaicon.png"
-        alt="Instagram"
-      >
-
+      <img src="instaicon.png" alt="Instagram">
     </a>
 
     <a
@@ -1756,12 +1735,7 @@ footer p {
       rel="noopener noreferrer"
       aria-label="TikTok"
     >
-
-      <img
-        src="tticon.png"
-        alt="TikTok"
-      >
-
+      <img src="tticon.png" alt="TikTok">
     </a>
 
   </div>
@@ -1802,29 +1776,16 @@ footer p {
 
   <div class="ticket-event-grid">
 
-    <!-- NOT SO SCARY TICKETS -->
-
     <div class="ticket-event-card magic-ticket">
 
       <h3>
         NOT SO SCARY CHRISTMAS
       </h3>
 
-      <p>
-        December 11 &amp; 18
-      </p>
-
-      <p>
-        General Admission $12
-      </p>
-
-      <p>
-        Children 3 &amp; under FREE
-      </p>
-
-      <p>
-        Christmas Market FREE to visit
-      </p>
+      <p>December 11 &amp; 18</p>
+      <p>General Admission $12</p>
+      <p>Children 3 &amp; under FREE</p>
+      <p>Christmas Market FREE to visit</p>
 
       <a
         href="https://www.simpletix.com/e/not-so-scary-christmas-terror-on-route-66-tickets-302401"
@@ -1837,17 +1798,13 @@ footer p {
 
     </div>
 
-    <!-- SLAUGHTERHAUS TICKETS -->
-
     <div class="ticket-event-card">
 
       <h3>
         SANTA'S SLAUGHTERHAUS
       </h3>
 
-      <p>
-        December 12 &amp; 19
-      </p>
+      <p>December 12 &amp; 19</p>
 
       <p>
         Multiple admission options
@@ -1872,8 +1829,6 @@ footer p {
 
   </div>
 
-  <!-- MAIN BUY TICKETS GRAPHIC -->
-
   <div class="center">
 
     <a
@@ -1882,13 +1837,11 @@ footer p {
       rel="noopener noreferrer"
       aria-label="Browse all Terror On Route 66 tickets"
     >
-
       <img
         src="buyTicketNow.png"
         alt="Buy Tickets Now"
         style="width:300px;max-width:80%;height:auto;"
       >
-
     </a>
 
   </div>
@@ -1903,9 +1856,7 @@ footer p {
 
   <div class="warning-box">
 
-    <h3>
-      ENTER AT YOUR OWN RISK!
-    </h3>
+    <h3>ENTER AT YOUR OWN RISK!</h3>
 
     <p class="warning-text">
       Terror On Route 66 is an intense
@@ -2045,9 +1996,7 @@ footer p {
 
   <div class="info-box">
 
-    <h3>
-      DO YOU HAVE WHAT IT TAKES?
-    </h3>
+    <h3>DO YOU HAVE WHAT IT TAKES?</h3>
 
     <p>
       Terror On Route 66 is always
@@ -2084,9 +2033,7 @@ footer p {
 
   <div class="info-box">
 
-    <h3>
-      BECOME A VENDOR!
-    </h3>
+    <h3>BECOME A VENDOR!</h3>
 
     <p>
       Interested in joining us
@@ -2158,20 +2105,16 @@ footer p {
 
   <p>
     <strong>PHONE:</strong><br>
-
     <a href="tel:+15736177424">
       (573) 617-7424
     </a>
-
   </p>
 
   <p>
     <strong>EMAIL:</strong><br>
-
     <a href="mailto:terror.on.66@gmail.com">
       terror.on.66@gmail.com
     </a>
-
   </p>
 
   <div class="center">
@@ -2211,7 +2154,6 @@ footer p {
 /* INTRO ELEMENTS */
 
 const intro = document.getElementById("intro");
-
 const bells = document.getElementById("bellsAudio");
 
 const enterButton =
@@ -2224,7 +2166,6 @@ const soundToggle =
   document.getElementById("soundToggle");
 
 let introSoundOn = true;
-
 let videoSoundOn = false;
 
 const prefersReducedMotion =
@@ -2300,41 +2241,7 @@ if (!prefersReducedMotion) {
 
 }
 
-/* INTRO SESSION MEMORY */
-
-let introAlreadySeen = false;
-
-try {
-
-  introAlreadySeen =
-    sessionStorage.getItem(
-      "terrorChristmasIntroSeen2026"
-    ) === "yes";
-
-} catch (error) {
-
-  introAlreadySeen = false;
-
-}
-
-function markIntroSeen() {
-
-  try {
-
-    sessionStorage.setItem(
-      "terrorChristmasIntroSeen2026",
-      "yes"
-    );
-
-  } catch (error) {
-
-    // Continue normally if storage is unavailable.
-
-  }
-
-}
-
-/* OPEN HOMEPAGE */
+/* INTRO SHOWS ON EVERY PAGE LOAD AND REFRESH */
 
 function openHomepage(playBells) {
 
@@ -2349,22 +2256,17 @@ function openHomepage(playBells) {
       playback &&
       typeof playback.catch === "function"
     ) {
-
       playback.catch(() => {});
-
     }
 
   }
 
   intro.classList.add("is-hidden");
-
   intro.hidden = true;
 
   document.body.classList.remove(
     "intro-active"
   );
-
-  markIntroSeen();
 
   window.scrollTo({
     top: 0,
@@ -2378,34 +2280,16 @@ function openHomepage(playBells) {
 enterButton.addEventListener(
   "click",
   function() {
-
     openHomepage(true);
-
   }
 );
 
 skipButton.addEventListener(
   "click",
   function() {
-
     openHomepage(false);
-
   }
 );
-
-/* SKIP INTRO IF ALREADY SEEN */
-
-if (introAlreadySeen) {
-
-  intro.classList.add("is-hidden");
-
-  intro.hidden = true;
-
-  document.body.classList.remove(
-    "intro-active"
-  );
-
-}
 
 /* INTRO SOUND TOGGLE */
 
@@ -2428,9 +2312,7 @@ soundToggle.addEventListener(
     );
 
     if (!introSoundOn) {
-
       bells.pause();
-
     }
 
   }
