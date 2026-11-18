@@ -2,428 +2,2523 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Santa's Slaughterhaus | Terror On Route 66</title>
-<meta name="description" content="Santa's Slaughterhaus at Terror On Route 66 in Sullivan, Missouri.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-@font-face{font-family:"October Crow";src:url("./October%20Crow.ttf") format("truetype");font-display:swap}
-@font-face{font-family:"Terror From Midnight";src:url("./Terror%20From%20Midnight.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#050505;color:#f5f5f5;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
-body.intro-active{overflow:hidden}
-a{color:inherit}
-button{cursor:pointer}
+  <title>Terror On Route 66 | Christmas Events 2026</title>
 
-/* HEADER */
-header{background:#050505;padding:8px 12px 18px;text-align:center;border-bottom:2px solid #8b0000;position:relative;z-index:2}
-header img{display:block;width:420px;max-width:95%;height:auto;margin:0 auto}
-.tagline{font-family:"October Crow",Georgia,serif;font-size:1.8rem;color:white;margin:-12px 0 0;letter-spacing:1px}
-.tagline span{color:#d00000}
-nav{margin-top:14px}
-nav a{display:inline-block;color:white;text-decoration:none;margin:5px 9px;font-weight:bold}
-nav a:hover{color:#ff3333}
+  <meta name="description" content="Experience Christmas magic and holiday horror at Terror On Route 66 in Sullivan, Missouri. Not So Scary Christmas December 11 & 18 and Santa's Slaughterhaus December 12 & 19, 2026.">
 
-/* HOMEPAGE */
-.video-hero{position:relative;width:100%;background:radial-gradient(ellipse at center,#260000 0%,#0b0000 40%,#050505 75%);display:flex;flex-direction:column;align-items:center;padding:25px 20px 55px;overflow:hidden}
-.home-slaughterhaus-container{position:relative;z-index:2;width:100%;max-width:900px;margin:15px auto 10px;padding:20px;text-align:center}
-.home-slaughterhaus-container::before{content:"";position:absolute;inset:5% 10%;z-index:-1;background:radial-gradient(ellipse at center,rgba(160,0,0,.35),rgba(90,0,0,.16) 40%,transparent 75%);filter:blur(35px);pointer-events:none}
-.home-slaughterhaus-logo{display:block;width:100%;max-width:800px;height:auto;margin:0 auto;object-fit:contain;filter:drop-shadow(0 0 18px rgba(160,0,0,.35))}
+  <link rel="icon" href="logo.png">
 
-/* TICKETS ON SALE NOW */
-.tickets-coming-soon{position:relative;z-index:3;font-family:"October Crow",Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;text-align:center;letter-spacing:1px;margin:5px auto 15px;text-shadow:0 0 15px rgba(180,0,0,.55)}
-.hero-ticket-link{position:relative;z-index:3;display:block;width:300px;max-width:80%;margin:0 auto 40px;text-align:center}
-.hero-ticket-image{display:block;width:100%;height:auto;transition:transform .2s,filter .2s}
-.hero-ticket-image:hover{transform:scale(1.05);filter:drop-shadow(0 0 12px rgba(255,0,0,.7))}
+  <style>
+    @font-face {
+      font-family: "October Crow";
+      src: url("./October%20Crow.ttf") format("truetype");
+      font-display: swap;
+    }
 
-/* VIDEO */
-.video-container{position:relative;z-index:2;height:min(76vh,780px);width:min(calc(76vh * .5625),440px);max-width:100%;background:#000;overflow:hidden;box-shadow:0 0 35px rgba(0,0,0,.9),0 0 80px rgba(120,0,0,.25)}
-.video-container iframe{width:100%;height:100%;border:0;display:block}
-.sound-button{position:absolute;right:10px;bottom:10px;z-index:5;width:40px;height:40px;border-radius:50%;border:1px solid #aaa;background:#000c;color:white;font-size:17px}
+    @font-face {
+      font-family: "Terror From Midnight";
+      src: url("./Terror%20From%20Midnight.ttf") format("truetype");
+      font-display: swap;
+    }
 
-/* SOCIAL MEDIA */
-.social-media-row{position:relative;z-index:3;display:flex;justify-content:center;align-items:center;gap:22px;margin-top:25px}
-.social-media-row a{display:block;width:55px;height:55px;transition:transform .2s}
-.social-media-row a:hover{transform:scale(1.12)}
-.social-media-row img{width:100%;height:100%;object-fit:contain}
+    :root {
+      --red: #b00000;
+      --dark-red: #650000;
+      --green: #246b46;
+      --gold: #e7c88c;
+      --black: #050505;
+      --white: #f5f5f5;
+    }
 
-/* SECTIONS */
-section:not(.video-hero){padding:70px 20px;max-width:1100px;margin:auto;position:relative;z-index:1}
-section h2{font-family:"October Crow",Georgia,serif;text-align:center;font-size:2.5rem;margin:0 0 30px;text-transform:uppercase}
-section p{max-width:800px;margin:0 auto 20px;text-align:center;color:#ccc}
-.tickets{background:#111;max-width:none!important}
-.ticket-intro{max-width:900px;margin:0 auto 40px;text-align:center}
-.ticket-intro h3{font-size:1.35rem;margin-bottom:15px}
-.warning-text{color:#ff1a1a!important;font-weight:bold;text-transform:uppercase}
-.important-text{color:white!important;font-weight:bold}
-.admission-notice{color:#ddd!important;font-size:.95rem;max-width:780px!important;margin:8px auto 0!important;line-height:1.6}
-.admission-notice strong{color:#fff}
-.admission-list{max-width:900px;margin:0 auto 35px}
-.admission-option{background:#181818;border-left:4px solid #8b0000;padding:22px 25px;margin-bottom:18px}
-.admission-option h3{color:white;font-size:1.25rem;margin:0 0 8px}
-.admission-option p{max-width:none;text-align:left;margin:0;color:#ccc}
-.button{display:inline-block;background:#a00000;color:white;padding:15px 35px;text-decoration:none;font-size:1.1rem;font-weight:bold;text-transform:uppercase;border-radius:4px;margin:8px;transition:background .2s,transform .2s}
-.button:hover{background:#d00000;transform:translateY(-2px)}
+    * {
+      box-sizing: border-box;
+    }
 
-/* WARNING */
-.warning-section{background:#080808;border-top:1px solid #222;border-bottom:1px solid #222}
-.warning-box{max-width:900px;margin:auto;background:#111;border:2px solid #8b0000;padding:35px}
-.warning-box h3{text-align:center;color:#e00000;font-family:"October Crow",Georgia,serif;font-size:2rem;margin:0 0 20px}
-.warning-box ul{max-width:750px;margin:auto;padding-left:25px}
-.warning-box li{margin-bottom:12px;color:#ccc}
-.rules-image{display:block;width:100%;max-width:850px;height:auto;margin:35px auto 20px;border:1px solid #333}
-.waiver-link{display:block;width:fit-content;margin:20px auto;color:white;background:#8b0000;padding:12px 25px;text-decoration:none;font-weight:bold;text-transform:uppercase;border-radius:4px}
-.waiver-link:hover{background:#d00000}
-.schedule-section,.jobs-section{background:#111}
-.directions-section,.contact-section{background:#080808}
-.address{font-size:1.2rem;color:white!important;margin-bottom:30px!important}
-.map-container{max-width:900px;margin:0 auto 30px;height:450px;overflow:hidden;border:2px solid #8b0000}
-.map-container iframe{width:100%;height:100%;border:0}
-.jobs-box{max-width:800px;margin:auto;background:#181818;border-left:4px solid #8b0000;padding:35px;text-align:center}
-.jobs-box h3{font-family:"October Crow",Georgia,serif;font-size:2rem;color:#e00000;margin:0 0 20px}
-.jobs-box p{max-width:700px}
-.contact-logo{display:block;width:300px;max-width:80%;height:auto;margin:0 auto 30px}
-footer{position:relative;z-index:1;background:#050505;border-top:2px solid #8b0000;text-align:center;padding:30px 20px}
-footer p{color:#777;margin:0 0 5px}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
 
-/* INTRO */
-#intro{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 75%,#250306 0%,#090b10 48%,#000 90%)}
-#intro::before{content:"";position:absolute;width:min(90vw,950px);height:min(90vw,750px);left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(220,0,0,.45) 0%,rgba(140,0,0,.28) 30%,rgba(70,0,0,.12) 55%,transparent 75%);filter:blur(45px);pointer-events:none}
-#intro::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.7));pointer-events:none}
-#intro.is-hidden,#intro[hidden]{display:none!important}
-.intro-content{position:relative;z-index:3;width:min(95%,850px);padding:20px;text-align:center}
-.intro-logo-heading{margin:0 auto 30px}
-.intro-logo{display:block;width:100%;max-width:720px;max-height:60vh;height:auto;object-fit:contain;margin:0 auto;filter:drop-shadow(0 0 18px rgba(190,0,0,.55)) drop-shadow(0 0 45px rgba(140,0,0,.4))}
-#intro #enterButton{display:inline-block;background:linear-gradient(180deg,#a20b0b,#480000);color:#000;border:1px solid #e34a4a;border-radius:5px;padding:20px 42px;font-family:"Terror From Midnight",serif!important;font-size:clamp(2rem,5vw,3.2rem)!important;font-style:normal!important;font-weight:400!important;letter-spacing:1px;line-height:1.25;text-transform:uppercase;text-shadow:none;box-shadow:0 0 20px rgba(180,0,0,.45),inset 0 0 15px rgba(0,0,0,.5);transition:background .2s,transform .2s,box-shadow .2s}
-#intro #enterButton:hover,#intro #enterButton:focus-visible{background:linear-gradient(180deg,#d00000,#700000);transform:scale(1.04);box-shadow:0 0 35px rgba(220,0,0,.65)}
-.intro-skip{display:block;margin:20px auto 0;border:0;background:none;color:#aaa;text-decoration:underline;font-size:.9rem}
-.intro-skip:hover{color:white}
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
 
-/* SNOW */
-.snow-layer{position:fixed;inset:0;z-index:5;pointer-events:none;overflow:hidden}
-.snow-layer.intro-snow{position:absolute;z-index:2}
-.snowflake{position:absolute;top:-30px;left:var(--x);width:var(--size);height:var(--size);border-radius:50%;background:#f7fbff;opacity:var(--opacity);box-shadow:0 0 5px #fff7;animation:snowfall var(--duration) linear var(--delay) infinite;will-change:transform}
-@keyframes snowfall{from{transform:translate3d(0,-5vh,0)}to{transform:translate3d(var(--drift),110vh,0)}}
-#siteSnow{z-index:6;opacity:.55}
-#soundToggle{position:fixed;z-index:10001;right:14px;bottom:14px;border:1px solid #6c6c6c;border-radius:30px;background:#120909e8;color:white;padding:9px 14px;font-weight:bold}
+    body.intro-active {
+      overflow: hidden;
+    }
 
-/* MOBILE */
-@media(max-width:768px){
-header{padding:5px 8px 14px}
-header img{width:350px;max-width:95%}
-.tagline{font-size:1.35rem;margin:-10px 0 0}
-nav a{font-size:.9rem;margin:5px 6px}
-.video-container{height:78vh;width:calc(78vh * .5625);max-width:100%}
-section h2{font-size:2rem}
-.warning-box{padding:25px 20px}
-.contact-logo{width:250px}
-.map-container{height:350px}
-.intro-logo{max-width:95%;max-height:52vh}
-#intro #enterButton{font-size:2rem!important;padding:17px 42px}
-.home-slaughterhaus-container{margin:10px auto 5px;padding:10px}
-.tickets-coming-soon{font-size:1.8rem;margin:5px auto 12px}
-.hero-ticket-link{margin-bottom:30px}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.snowflake{animation:none;display:none}}
-</style>
+    a {
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #050505;
+      padding: 8px 12px 18px;
+      text-align: center;
+      border-bottom: 2px solid #8b0000;
+      position: relative;
+      z-index: 2;
+    }
+
+    .header-logo {
+      display: block;
+      width: 420px;
+      max-width: 95%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .tagline {
+      font-family: "October Crow", Georgia, serif;
+      font-size: 1.8rem;
+      color: white;
+      margin: -12px 0 0;
+      letter-spacing: 1px;
+    }
+
+    .tagline span {
+      color: #d00000;
+    }
+
+    nav {
+      margin-top: 14px;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      margin: 5px 9px;
+      font-size: .95rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: #ff3333;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section:not(.hero) {
+      padding: 70px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    section h2 {
+      font-family: "October Crow", Georgia, serif;
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 0 0 25px;
+      text-transform: uppercase;
+    }
+
+    section p {
+      max-width: 850px;
+      margin: 0 auto 20px;
+      text-align: center;
+      color: #ccc;
+    }
+
+    .button {
+      display: inline-block;
+      background: #a00000;
+      color: white;
+      padding: 15px 32px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 4px;
+      margin: 8px;
+      border: 1px solid transparent;
+      transition: background .2s, transform .2s;
+      text-align: center;
+    }
+
+    .button:hover {
+      background: #d00000;
+      transform: translateY(-2px);
+    }
+
+    .button.green {
+      background: #276d48;
+    }
+
+    .button.green:hover {
+      background: #36965f;
+    }
+
+    .button.outline {
+      background: transparent;
+      border-color: #777;
+    }
+
+    .button.outline:hover {
+      background: #333;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    /* HOMEPAGE HERO */
+
+    .hero {
+      background:
+        radial-gradient(
+          ellipse at 50% 15%,
+          #300b0d 0%,
+          #110809 48%,
+          #050505 90%
+        );
+      padding: 55px 20px 65px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 1150px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-family: "October Crow", Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 4.3rem);
+      line-height: 1.2;
+      margin: 0 0 12px;
+      color: white;
+      text-shadow: 0 0 22px rgba(160,0,0,.5);
+    }
+
+    .hero-subtitle {
+      color: #e5d5d5;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      margin: 0 auto 35px;
+      max-width: 800px;
+    }
+
+    .hero-event-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 28px;
+      max-width: 1050px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+
+    .hero-event {
+      display: flex;
+      flex-direction: column;
+      background: #100e0e;
+      border-radius: 10px;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .hero-event.magic {
+      border: 2px solid #396b4c;
+      box-shadow: 0 0 35px rgba(40,120,65,.2);
+    }
+
+    .hero-event.madness {
+      border: 2px solid #8b0000;
+      box-shadow: 0 0 35px rgba(150,0,0,.2);
+    }
+
+    .hero-event img {
+      width: 100%;
+      height: 390px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 18px;
+    }
+
+    .hero-event h3 {
+      font-family: "October Crow", Georgia, serif;
+      font-size: clamp(1.45rem, 2.5vw, 2rem);
+      line-height: 1.25;
+      margin: 0 0 8px;
+    }
+
+    .hero-event .date {
+      color: var(--gold);
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .hero-event p {
+      color: #ccc;
+      margin: 0 auto 15px;
+      flex: 1;
+    }
+
+    .hero-event .button {
+      margin-top: auto;
+    }
+
+    .hero-bottom {
+      margin-top: 35px;
+    }
+
+    /* EVENTS OVERVIEW */
+
+    .events-section {
+      background: #111;
+    }
+
+    .events-wrap {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .events-overview {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .overview-card {
+      background: #191919;
+      padding: 30px 22px;
+      border-left: 4px solid #8b0000;
+      text-align: center;
+    }
+
+    .overview-card.magic-card {
+      border-left-color: #39734d;
+    }
+
+    .overview-card h3 {
+      font-family: "October Crow", Georgia, serif;
+      font-size: 1.7rem;
+      margin: 0 0 12px;
+    }
+
+    .overview-card .event-date {
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    /* DEDICATED EVENT SECTIONS */
+
+    .event-detail {
+      overflow: hidden;
+    }
+
+    .magic-section {
+      background:
+        radial-gradient(
+          ellipse at top,
+          #14251a 0%,
+          #090e0a 50%,
+          #050505 100%
+        );
+      border-top: 1px solid #34523c;
+    }
+
+    .madness-section {
+      background:
+        radial-gradient(
+          ellipse at top,
+          #2b0808 0%,
+          #100505 50%,
+          #050505 100%
+        );
+      border-top: 1px solid #650000;
+    }
+
+    .event-detail-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .event-detail-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+      align-items: center;
+      gap: 45px;
+      margin-top: 35px;
+    }
+
+    .event-detail-image {
+      display: block;
+      width: 100%;
+      max-height: 650px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 25px rgba(0,0,0,.6));
+    }
+
+    .event-detail-copy {
+      text-align: left;
+    }
+
+    .event-detail-copy h3 {
+      font-family: "October Crow", Georgia, serif;
+      font-size: 1.8rem;
+      color: white;
+      margin: 0 0 15px;
+    }
+
+    .event-detail-copy p {
+      text-align: left;
+      max-width: none;
+      margin: 0 0 18px;
+    }
+
+    .event-detail-copy .button {
+      margin-left: 0;
+    }
+
+    .event-info {
+      background: rgba(0,0,0,.45);
+      border: 1px solid #555;
+      padding: 22px;
+      margin: 22px 0;
+      border-radius: 5px;
+    }
+
+    .event-info p {
+      margin: 0 0 9px;
+      color: #eee;
+    }
+
+    .event-info p:last-child {
+      margin-bottom: 0;
+    }
+
+    .event-info strong {
+      color: white;
+    }
+
+    .event-detail-copy ul {
+      padding-left: 22px;
+      color: #ddd;
+      margin: 12px 0 25px;
+    }
+
+    .event-detail-copy li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    /* VIDEO */
+
+    .video-hero {
+      background:
+        radial-gradient(
+          ellipse at center,
+          #260000 0%,
+          #0b0000 45%,
+          #050505 80%
+        );
+      text-align: center;
+    }
+
+    .video-container {
+      position: relative;
+      height: min(76vh,780px);
+      width: min(calc(76vh * .5625),440px);
+      max-width: 100%;
+      margin: 30px auto;
+      background: #000;
+      overflow: hidden;
+      box-shadow:
+        0 0 35px rgba(0,0,0,.9),
+        0 0 80px rgba(120,0,0,.25);
+    }
+
+    .video-container iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .sound-button {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      z-index: 5;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid #aaa;
+      background: #000c;
+      color: white;
+      font-size: 18px;
+    }
+
+    .social-media-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .social-media-row a {
+      display: block;
+      width: 55px;
+      height: 55px;
+      transition: transform .2s;
+    }
+
+    .social-media-row a:hover {
+      transform: scale(1.12);
+    }
+
+    .social-media-row img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* TICKETS */
+
+    .tickets {
+      background: #111;
+    }
+
+    .ticket-intro {
+      max-width: 900px;
+      margin: 0 auto 35px;
+      text-align: center;
+    }
+
+    .ticket-intro h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    .admission-notice {
+      color: #ddd;
+      font-size: .95rem;
+      max-width: 780px;
+      margin: 12px auto;
+    }
+
+    .ticket-event-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 35px auto;
+    }
+
+    .ticket-event-card {
+      background: #181818;
+      padding: 30px 25px;
+      border-top: 4px solid #8b0000;
+      text-align: center;
+    }
+
+    .ticket-event-card.magic-ticket {
+      border-top-color: #39734d;
+    }
+
+    .ticket-event-card h3 {
+      font-family: "October Crow", Georgia, serif;
+      font-size: 1.7rem;
+      margin: 0 0 15px;
+    }
+
+    .ticket-event-card p {
+      margin-bottom: 15px;
+    }
+
+    /* WARNING */
+
+    .warning-section {
+      background: #080808;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .warning-box {
+      max-width: 900px;
+      margin: auto;
+      background: #111;
+      border: 2px solid #8b0000;
+      padding: 35px;
+    }
+
+    .warning-box h3 {
+      text-align: center;
+      color: #e00000;
+      font-family: "October Crow", Georgia, serif;
+      font-size: 2rem;
+      margin: 0 0 20px;
+    }
+
+    .warning-box ul {
+      max-width: 750px;
+      margin: auto;
+      padding-left: 25px;
+    }
+
+    .warning-box li {
+      margin-bottom: 12px;
+      color: #ccc;
+    }
+
+    .warning-text {
+      color: #ff3333 !important;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .rules-image {
+      display: block;
+      width: 100%;
+      max-width: 850px;
+      height: auto;
+      margin: 35px auto 20px;
+      border: 1px solid #333;
+    }
+
+    .waiver-link {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+      margin: 20px auto;
+      color: white;
+      background: #8b0000;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .waiver-link:hover {
+      background: #d00000;
+    }
+
+    /* DIRECTIONS */
+
+    .directions-section {
+      background: #080808;
+    }
+
+    .address {
+      font-size: 1.2rem;
+      color: white !important;
+      margin-bottom: 30px !important;
+    }
+
+    .map-container {
+      max-width: 900px;
+      margin: 0 auto 30px;
+      height: 450px;
+      overflow: hidden;
+      border: 2px solid #8b0000;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* JOBS AND VENDORS */
+
+    .jobs-section {
+      background: #111;
+    }
+
+    .vendors-section {
+      background: #080808;
+    }
+
+    .info-box {
+      max-width: 850px;
+      margin: auto;
+      background: #181818;
+      border-left: 4px solid #8b0000;
+      padding: 35px;
+      text-align: center;
+    }
+
+    .info-box h3 {
+      font-family: "October Crow", Georgia, serif;
+      font-size: 2rem;
+      color: #e00000;
+      margin: 0 0 20px;
+    }
+
+    .info-box p {
+      max-width: 750px;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      background: #080808;
+    }
+
+    .contact-logo {
+      display: block;
+      width: 300px;
+      max-width: 80%;
+      height: auto;
+      margin: 0 auto 30px;
+    }
+
+    .contact-section a:not(.button) {
+      color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      position: relative;
+      z-index: 1;
+      background: #050505;
+      border-top: 2px solid #8b0000;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      color: #888;
+      margin: 0 0 5px;
+    }
+
+    .footer-tagline {
+      font-family: "October Crow", Georgia, serif;
+      color: #d00000;
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    /* INTRO OVERLAY */
+
+    #intro {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      isolation: isolate;
+      overflow-y: auto;
+      background:
+        radial-gradient(
+          ellipse at 50% 70%,
+          #260708 0%,
+          #090b10 48%,
+          #000 90%
+        );
+    }
+
+    #intro::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(
+          ellipse at 25% 50%,
+          rgba(35,110,55,.22),
+          transparent 45%
+        ),
+        radial-gradient(
+          ellipse at 75% 50%,
+          rgba(170,0,0,.25),
+          transparent 45%
+        );
+      pointer-events: none;
+    }
+
+    #intro.is-hidden,
+    #intro[hidden] {
+      display: none !important;
+    }
+
+    .intro-content {
+      position: relative;
+      z-index: 3;
+      width: min(96%,1100px);
+      padding: 30px 15px 45px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .intro-brand-logo {
+      display: block;
+      width: 260px;
+      max-width: 65%;
+      height: auto;
+      margin: 0 auto 0;
+      filter: drop-shadow(0 0 15px rgba(150,0,0,.4));
+    }
+
+    .intro-heading {
+      font-family: "October Crow", Georgia, serif;
+      font-size: clamp(2rem,5vw,3.7rem);
+      line-height: 1.1;
+      color: white;
+      margin: 0 0 8px;
+      text-shadow: 0 0 20px rgba(180,0,0,.6);
+    }
+
+    .intro-subtitle {
+      color: #e0caca;
+      font-size: clamp(.95rem,2vw,1.2rem);
+      margin: 0 0 24px;
+    }
+
+    .intro-choices {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 25px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .intro-choice {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      border-radius: 9px;
+      background: rgba(0,0,0,.5);
+      transition: transform .25s,box-shadow .25s;
+    }
+
+    .intro-choice.magic-choice {
+      border: 2px solid #376b4a;
+      box-shadow: 0 0 30px rgba(45,130,65,.2);
+    }
+
+    .intro-choice.madness-choice {
+      border: 2px solid #8b0000;
+      box-shadow: 0 0 30px rgba(180,0,0,.2);
+    }
+
+    .intro-choice:hover {
+      transform: translateY(-4px);
+    }
+
+    .intro-choice img {
+      display: block;
+      width: 100%;
+      height: clamp(180px,30vh,350px);
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .intro-choice h3 {
+      font-family: "October Crow", Georgia, serif;
+      color: white;
+      font-size: clamp(1.1rem,2.5vw,1.6rem);
+      margin: 0 0 5px;
+      line-height: 1.2;
+    }
+
+    .intro-choice .date {
+      color: var(--gold);
+      font-size: .9rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .intro-enter {
+      display: inline-block;
+      width: 100%;
+      max-width: 320px;
+      padding: 13px 12px;
+      margin-top: auto;
+      border: 1px solid #b0b0b0;
+      border-radius: 5px;
+      color: white;
+      font-family: "Terror From Midnight", Georgia, serif;
+      font-size: clamp(1.35rem,3vw,2rem);
+      line-height: 1.2;
+      text-transform: uppercase;
+      transition: transform .2s,filter .2s;
+    }
+
+    .intro-enter:hover {
+      transform: scale(1.03);
+      filter: brightness(1.2);
+    }
+
+    .intro-enter.magic-button {
+      background: linear-gradient(180deg,#357c50,#15412a);
+    }
+
+    .intro-enter.madness-button {
+      background: linear-gradient(180deg,#b01010,#480000);
+    }
+
+    .intro-skip {
+      display: block;
+      margin: 25px auto 0;
+      padding: 8px 12px;
+      border: 0;
+      background: transparent;
+      color: #ccc;
+      font-size: .95rem;
+      text-decoration: underline;
+    }
+
+    .intro-skip:hover {
+      color: white;
+    }
+
+    /* SNOW */
+
+    .snow-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 5;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .snow-layer.intro-snow {
+      position: fixed;
+      z-index: 2;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -30px;
+      left: var(--x);
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      background: #f7fbff;
+      opacity: var(--opacity);
+      box-shadow: 0 0 5px #fff7;
+      animation:
+        snowfall var(--duration) linear var(--delay) infinite;
+      will-change: transform;
+    }
+
+    @keyframes snowfall {
+      from {
+        transform: translate3d(0,-5vh,0);
+      }
+
+      to {
+        transform: translate3d(var(--drift),110vh,0);
+      }
+    }
+
+    #siteSnow {
+      z-index: 6;
+      opacity: .55;
+    }
+
+    #soundToggle {
+      position: fixed;
+      z-index: 10001;
+      right: 14px;
+      bottom: 14px;
+      border: 1px solid #6c6c6c;
+      border-radius: 30px;
+      background: #120909e8;
+      color: white;
+      padding: 9px 14px;
+      font-weight: bold;
+      font-size: .85rem;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+      header {
+        padding: 5px 8px 14px;
+      }
+
+      .header-logo {
+        width: 350px;
+      }
+
+      .tagline {
+        font-size: 1.35rem;
+        margin: -10px 0 0;
+      }
+
+      nav a {
+        font-size: .82rem;
+        margin: 5px 6px;
+      }
+
+      .hero {
+        padding: 40px 15px 50px;
+      }
+
+      .hero-event-grid,
+      .events-overview,
+      .event-detail-grid,
+      .ticket-event-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-event {
+        max-width: 550px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .hero-event img {
+        height: 350px;
+      }
+
+      .event-detail-grid {
+        gap: 20px;
+      }
+
+      .event-detail-copy {
+        text-align: center;
+      }
+
+      .event-detail-copy p {
+        text-align: center;
+      }
+
+      .event-detail-copy ul {
+        text-align: left;
+      }
+
+      .event-detail-copy .button {
+        margin-left: 8px;
+      }
+
+      .video-container {
+        height: 78vh;
+        width: calc(78vh * .5625);
+      }
+
+      .warning-box {
+        padding: 25px 20px;
+      }
+
+      .map-container {
+        height: 350px;
+      }
+
+      .contact-logo {
+        width: 250px;
+      }
+
+      .intro-brand-logo {
+        width: 210px;
+      }
+
+      .intro-content {
+        padding-top: 20px;
+      }
+
+      .intro-choices {
+        gap: 12px;
+      }
+
+      .intro-choice {
+        padding: 10px;
+      }
+
+      .intro-choice img {
+        height: clamp(140px,27vh,260px);
+      }
+
+      .intro-choice h3 {
+        font-size: 1rem;
+      }
+
+      .intro-choice .date {
+        font-size: .75rem;
+      }
+
+      .intro-enter {
+        font-size: 1.35rem;
+        padding: 12px 5px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .intro-heading {
+        font-size: 1.85rem;
+      }
+
+      .intro-subtitle {
+        font-size: .88rem;
+      }
+
+      .intro-choices {
+        gap: 8px;
+      }
+
+      .intro-choice {
+        padding: 8px;
+      }
+
+      .intro-choice img {
+        height: 180px;
+      }
+
+      .intro-choice h3 {
+        font-size: .9rem;
+      }
+
+      .intro-enter {
+        font-size: 1.1rem;
+        min-height: 56px;
+      }
+
+      .hero-event img {
+        height: 300px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .snowflake {
+        display: none;
+        animation: none;
+      }
+    }
+  </style>
 </head>
 
 <body class="intro-active">
 
-<audio id="bellsAudio" src="sleigh-bells.mp3" preload="auto"></audio>
+  <!-- CHRISTMAS INTRO -->
 
-<!-- INTRO -->
-<div id="intro" role="dialog" aria-modal="true" aria-labelledby="introTitle">
-    <div id="introSnow" class="snow-layer intro-snow" aria-hidden="true"></div>
+  <div id="intro" role="dialog"
+       aria-modal="true"
+       aria-label="Choose your experience">
+
+    <div id="introSnow" class="snow-layer intro-snow"
+         aria-hidden="true"></div>
+
     <div class="intro-content">
-        <h1 id="introTitle" class="intro-logo-heading">
-            <img src="slaughterhaus2.0.png" alt="Santa's Slaughterhaus" class="intro-logo">
-        </h1>
-        <button id="enterButton" type="button">ENTER</button>
-        <button class="intro-skip" id="skipButton" type="button">Skip Intro</button>
+
+      <img
+        src="logo.png"
+        alt="Terror On Route 66"
+        class="intro-brand-logo"
+      >
+
+      <h1 class="intro-heading">
+        CHOOSE YOUR EXPERIENCE
+      </h1>
+
+      <p class="intro-subtitle">
+        Will you enter the magic... or the madness?
+      </p>
+
+      <div class="intro-choices">
+
+        <!-- MAGIC -->
+
+        <div class="intro-choice magic-choice">
+
+          <img
+            src="not-so.png"
+            alt="Not So Scary Christmas"
+          >
+
+          <h3>NOT SO SCARY CHRISTMAS</h3>
+
+          <div class="date">
+            DECEMBER 11 &amp; 18
+          </div>
+
+          <button
+            class="intro-enter magic-button"
+            type="button"
+            data-intro-target="not-so-scary"
+          >
+            ENTER THE MAGIC
+          </button>
+
+        </div>
+
+        <!-- MADNESS -->
+
+        <div class="intro-choice madness-choice">
+
+          <img
+            src="slaughterhaus2.png"
+            alt="Santa's Slaughterhaus"
+          >
+
+          <h3>SANTA'S SLAUGHTERHAUS</h3>
+
+          <div class="date">
+            DECEMBER 12 &amp; 19
+          </div>
+
+          <button
+            class="intro-enter madness-button"
+            type="button"
+            data-intro-target="slaughterhaus"
+          >
+            ENTER THE MADNESS
+          </button>
+
+        </div>
+
+      </div>
+
+      <button
+        id="skipButton"
+        class="intro-skip"
+        type="button"
+      >
+        SKIP INTRO — EXPLORE ALL EVENTS
+      </button>
+
     </div>
-</div>
+  </div>
 
-<div id="siteSnow" class="snow-layer" aria-hidden="true"></div>
-<button id="soundToggle" type="button" aria-label="Mute sleigh bells">🔊 Intro sound: ON</button>
+  <!-- SOUND -->
 
-<!-- HEADER -->
-<header>
-    <img src="logo.png" alt="Terror On Route 66 Haunted House">
-    <p class="tagline">Missouri's Most <span>EXTREME</span> Haunted Attraction!</p>
-    <nav>
-        <a href="#home">HOME</a>
-        <a href="https://www.simpletix.com/e/santa-slaughterhaus-a-holiday-horror-exper-tickets-301332" target="_blank" rel="noopener">BUY TICKETS</a>
-        <a href="#warning">WARNING!</a>
-        <a href="#schedule">SCHEDULE</a>
-        <a href="#directions">DIRECTIONS</a>
-        <a href="#jobs">JOBS</a>
-        <a href="#vendors">VENDORS</a>
-        <a href="#contact">CONTACT</a>
-    </nav>
-</header>
+  <audio id="bellsAudio" preload="auto">
+    <source src="sleigh-bells.mp3" type="audio/mpeg">
+  </audio>
 
-<main>
+  <button
+    id="soundToggle"
+    type="button"
+    aria-label="Mute sleigh bells"
+  >
+    🔊 Intro sound: ON
+  </button>
 
-<!-- HOMEPAGE -->
-<section class="video-hero" id="home">
-    <div class="home-slaughterhaus-container">
-        <img src="slaughterhaus2.png" alt="Santa's Slaughterhaus" class="home-slaughterhaus-logo">
-    </div>
+  <div id="siteSnow" class="snow-layer"
+       aria-hidden="true"></div>
 
-    <!-- UPDATED: TICKETS ON SALE NOW -->
-    <div class="tickets-coming-soon">Tickets On Sale Now!</div>
+  <!-- HEADER -->
 
-    <a class="hero-ticket-link" href="https://www.simpletix.com/e/santa-slaughterhaus-a-holiday-horror-exper-tickets-301332" target="_blank" rel="noopener" aria-label="Buy Tickets Now">
-        <img src="buyTicketNow.png" alt="Buy Tickets Now" class="hero-ticket-image">
+  <header id="home">
+
+    <a href="#home" aria-label="Terror On Route 66 Home">
+      <img
+        src="logo.png"
+        alt="Terror On Route 66"
+        class="header-logo"
+      >
     </a>
 
+    <div class="tagline">
+      Missouri's Most
+      <span>Extreme</span>
+      Haunted Attraction!
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">HOME</a>
+      <a href="#events">EVENTS</a>
+      <a href="#not-so-scary">NOT SO SCARY CHRISTMAS</a>
+      <a href="#slaughterhaus">SANTA'S SLAUGHTERHAUS</a>
+      <a
+        href="https://terroronroute66.simpletix.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >BUY TICKETS</a>
+      <a href="#warning">WARNING!</a>
+      <a href="#directions">DIRECTIONS</a>
+      <a href="#jobs">JOBS</a>
+      <a href="#vendors">VENDORS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+  </header>
+
+  <!-- MAIN HOMEPAGE -->
+
+  <section class="hero" id="homepage">
+
+    <div class="hero-content">
+
+      <h1>TWO EVENTS. TWO EXPERIENCES.</h1>
+
+      <p class="hero-subtitle">
+        A little Christmas magic.
+        A little Christmas madness.
+        This December, choose your experience
+        at Terror On Route 66!
+      </p>
+
+      <div class="hero-event-grid">
+
+        <!-- NOT SO SCARY -->
+
+        <div class="hero-event magic">
+
+          <img
+            src="not-so.png"
+            alt="Not So Scary Christmas event graphic"
+          >
+
+          <h3>NOT SO SCARY CHRISTMAS</h3>
+
+          <div class="date">
+            FRIDAYS • DECEMBER 11 &amp; 18
+          </div>
+
+          <p>
+            A family-friendly Christmas experience
+            filled with holiday lights, festive
+            decorations, Santa, and Christmas magic.
+            No scare actors!
+          </p>
+
+          <a
+            href="#not-so-scary"
+            class="button green"
+          >
+            ENTER THE MAGIC
+          </a>
+
+        </div>
+
+        <!-- SLAUGHTERHAUS -->
+
+        <div class="hero-event madness">
+
+          <img
+            src="slaughterhaus2.png"
+            alt="Santa's Slaughterhaus event graphic"
+          >
+
+          <h3>SANTA'S SLAUGHTERHAUS</h3>
+
+          <div class="date">
+            SATURDAYS • DECEMBER 12 &amp; 19
+          </div>
+
+          <p>
+            Christmas takes a terrifying turn!
+            Step inside our haunted attraction
+            for a twisted holiday horror experience
+            unlike your traditional Christmas celebration.
+          </p>
+
+          <a
+            href="#slaughterhaus"
+            class="button"
+          >
+            ENTER THE MADNESS
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-bottom">
+
+        <a
+          href="https://terroronroute66.simpletix.com/"
+          class="button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BUY TICKETS
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EVENTS OVERVIEW -->
+
+  <section id="events" class="events-section">
+
+    <div class="events-wrap">
+
+      <h2>UPCOMING EVENTS</h2>
+
+      <p>
+        This Christmas season, Terror On Route 66
+        brings you two completely different
+        holiday experiences!
+      </p>
+
+      <div class="events-overview">
+
+        <div class="overview-card magic-card">
+
+          <h3>NOT SO SCARY CHRISTMAS</h3>
+
+          <p class="event-date">
+            FRIDAY, DECEMBER 11 &amp; 18, 2026
+          </p>
+
+          <p>
+            7:00 PM – 9:30 PM
+          </p>
+
+          <p>
+            A family-friendly evening of Christmas
+            lights, holiday fun, Santa visits,
+            and festive memories.
+          </p>
+
+          <a
+            href="#not-so-scary"
+            class="button green"
+          >
+            EVENT DETAILS
+          </a>
+
+        </div>
+
+        <div class="overview-card">
+
+          <h3>SANTA'S SLAUGHTERHAUS</h3>
+
+          <p class="event-date">
+            SATURDAY, DECEMBER 12 &amp; 19, 2026
+          </p>
+
+          <p>
+            Holiday Horror Experience
+          </p>
+
+          <p>
+            A twisted Christmas haunted attraction
+            featuring scares, interactive options,
+            and terrifying holiday characters.
+          </p>
+
+          <a
+            href="#slaughterhaus"
+            class="button"
+          >
+            EVENT DETAILS
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- NOT SO SCARY CHRISTMAS -->
+
+  <section id="not-so-scary"
+           class="event-detail magic-section">
+
+    <div class="event-detail-inner">
+
+      <div class="section-subtitle">
+        ENTER THE MAGIC
+      </div>
+
+      <h2>NOT SO SCARY CHRISTMAS</h2>
+
+      <p>
+        A little Christmas magic with a little
+        Halloween charm!
+      </p>
+
+      <div class="event-detail-grid">
+
+        <div>
+
+          <img
+            src="not-so.png"
+            alt="Not So Scary Christmas"
+            class="event-detail-image"
+          >
+
+        </div>
+
+        <div class="event-detail-copy">
+
+          <h3>
+            A Magical Christmas Experience
+            For The Whole Family!
+          </h3>
+
+          <p>
+            Join us at Terror On Route 66 for
+            Not So Scary Christmas, a special
+            family-friendly holiday event!
+          </p>
+
+          <p>
+            We've traded the screams for Christmas
+            cheer! Explore our attraction decorated
+            with festive lights and holiday magic,
+            without the scare actors.
+          </p>
+
+          <p>
+            Bring the kids, enjoy the decorations,
+            visit with Santa, and make some
+            Christmas memories!
+          </p>
+
+          <div class="event-info">
+
+            <p>
+              <strong>DATES:</strong>
+              Friday, December 11 &amp; 18, 2026
+            </p>
+
+            <p>
+              <strong>TIME:</strong>
+              7:00 PM – 9:30 PM
+            </p>
+
+            <p>
+              <strong>GENERAL ADMISSION:</strong>
+              $12 per person
+            </p>
+
+            <p>
+              <strong>CHILDREN 3 &amp; UNDER:</strong>
+              FREE
+            </p>
+
+            <p>
+              <strong>CHRISTMAS MARKET:</strong>
+              FREE to visit
+            </p>
+
+          </div>
+
+          <h3>WHAT TO EXPECT</h3>
+
+          <ul>
+            <li>
+              A festive walk-through decorated
+              with Christmas lights
+            </li>
+
+            <li>
+              A chance to meet Santa
+              and Mrs. Claus
+            </li>
+
+            <li>
+              Holiday photo opportunities
+            </li>
+
+            <li>
+              Christmas market vendors
+            </li>
+
+            <li>
+              Family-friendly holiday atmosphere
+            </li>
+
+            <li>
+              No scare actors during this event
+            </li>
+          </ul>
+
+          <p class="highlight">
+            The Christmas Market is FREE to visit!
+            Walk-through admission is $12,
+            and children ages 3 and under
+            are admitted free.
+          </p>
+
+          <a
+            href="https://terroronroute66.simpletix.com/"
+            class="button green"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            BUY NOT SO SCARY TICKETS
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SANTA'S SLAUGHTERHAUS -->
+
+  <section id="slaughterhaus"
+           class="event-detail madness-section">
+
+    <div class="event-detail-inner">
+
+      <div class="section-subtitle">
+        ENTER THE MADNESS
+      </div>
+
+      <h2>SANTA'S SLAUGHTERHAUS</h2>
+
+      <p>
+        This Christmas, Santa isn't bringing
+        presents... he's bringing nightmares!
+      </p>
+
+      <div class="event-detail-grid">
+
+        <div>
+
+          <img
+            src="slaughterhaus2.png"
+            alt="Santa's Slaughterhaus"
+            class="event-detail-image"
+          >
+
+        </div>
+
+        <div class="event-detail-copy">
+
+          <h3>
+            Christmas Has Never Been
+            This Terrifying!
+          </h3>
+
+          <p>
+            Santa's Slaughterhaus takes everything
+            you love about Christmas and twists
+            it into a horrifying holiday nightmare!
+          </p>
+
+          <p>
+            Step into our haunted attraction
+            where the Christmas spirit has
+            taken a very dark turn.
+          </p>
+
+          <p>
+            From traditional scares to our
+            more extreme interactive experiences,
+            there's more than one way to
+            experience the madness!
+          </p>
+
+          <div class="event-info">
+
+            <p>
+              <strong>DATES:</strong>
+              Saturday, December 12 &amp; 19, 2026
+            </p>
+
+            <p>
+              <strong>LOCATION:</strong>
+              Terror On Route 66
+            </p>
+
+            <p>
+              <strong>ADMISSION:</strong>
+              Multiple intensity levels available
+            </p>
+
+          </div>
+
+          <h3>CHOOSE YOUR ADMISSION</h3>
+
+          <ul>
+
+            <li>
+              <strong>THE NICE LIST</strong>
+              — General Admission.
+              Traditional haunted house walk-through.
+            </li>
+
+            <li>
+              <strong>SANTA'S LITTLE HELPER</strong>
+              — Interactive Touch Experience.
+            </li>
+
+            <li>
+              <strong>THE NAUGHTY LIST</strong>
+              — Rated R Experience.
+              Adults 18+ only with valid ID.
+            </li>
+
+            <li>
+              <strong>REINDEER EXPRESS</strong>
+              — Admission, Fast Pass access,
+              and your choice of intensity level,
+              subject to age restrictions.
+            </li>
+
+            <li>
+              <strong>SANTA'S SACK</strong>
+              — VIP Experience including
+              a VIP lanyard, Christmas gift,
+              VIP wristband, front-of-line access,
+              and your choice of eligible
+              intensity level.
+            </li>
+
+          </ul>
+
+          <p class="warning-text">
+            Interactive and Rated R experiences
+            have additional requirements.
+            Review all warnings and waivers
+            before purchasing.
+          </p>
+
+          <a
+            href="https://terroronroute66.simpletix.com/"
+            class="button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            BUY SLAUGHTERHAUS TICKETS
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- VIDEO AND SOCIAL MEDIA -->
+
+  <section class="video-hero" id="video">
+
+    <h2>EXPERIENCE THE TERROR</h2>
+
+    <p>
+      Take a look inside the world
+      of Terror On Route 66!
+    </p>
+
     <div class="video-container">
-        <iframe
-            id="terrorVideo"
-            src="https://www.youtube.com/embed/jrQEBbV6PdE?autoplay=1&mute=1&loop=1&playlist=jrQEBbV6PdE&controls=0&rel=0&playsinline=1&enablejsapi=1"
-            title="Terror On Route 66"
-            allow="autoplay; encrypted-media; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-        <button class="sound-button" id="soundButton" type="button" onclick="toggleSound()" aria-label="Turn video sound on">🔇</button>
+
+      <iframe
+        id="terrorVideo"
+        src="https://www.youtube.com/embed/jrQEBbV6PdE?autoplay=1&mute=1&loop=1&playlist=jrQEBbV6PdE&enablejsapi=1&playsinline=1"
+        title="Terror On Route 66 Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+
+      <button
+        id="soundButton"
+        class="sound-button"
+        type="button"
+        onclick="toggleSound()"
+        aria-label="Turn video sound on"
+      >
+        🔇
+      </button>
+
     </div>
 
     <div class="social-media-row">
-        <a href="https://www.facebook.com/TerrorOnRoute66/" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="fbicon.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/scare_stl" target="_blank" rel="noopener" aria-label="Instagram">
-            <img src="instaicon.png" alt="Instagram">
-        </a>
-        <a href="https://www.tiktok.com/@scare_stl" target="_blank" rel="noopener" aria-label="TikTok">
-            <img src="tticon.png" alt="TikTok">
-        </a>
-    </div>
-</section>
 
-<!-- BUY TICKETS -->
-<section class="tickets" id="tickets">
+      <a
+        href="https://www.facebook.com/TerrorOnRoute66/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+      >
+        <img src="fbicon.png" alt="Facebook">
+      </a>
+
+      <a
+        href="https://www.instagram.com/scare_stl"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+      >
+        <img src="instaicon.png" alt="Instagram">
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@scare_stl"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TikTok"
+      >
+        <img src="tticon.png" alt="TikTok">
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- BUY TICKETS -->
+
+  <section id="tickets" class="tickets">
+
     <h2>BUY TICKETS</h2>
-    <div class="ticket-intro">
-        <h3>Welcome to Terror On Route 66 Haunted House!</h3>
-        <p class="warning-text">ALL PARTICIPANTS ARE REQUIRED TO FILL OUT A WAIVER BEFORE ENTERING THE ATTRACTION!</p>
-        <p class="important-text">Open rain or shine unless posted otherwise on our Facebook page!</p>
-        <p class="admission-notice"><strong>PLEASE NOTE:</strong> Admission options are subject to change for off-season and special events. Certain admission options may be unavailable, modified, or replaced depending on the event. Please review the event-specific ticket information before purchasing.</p>
-    </div>
-
-    <div class="admission-list">
-        <div class="admission-option">
-            <h3>General Admission</h3>
-            <p>General Admission is your traditional haunted house walk through with jump scares and skits. No touch involved.</p>
-        </div>
-        <div class="admission-option">
-            <h3>Fast Pass</h3>
-            <p>Skip the general admission line, shorter wait time.</p>
-        </div>
-        <div class="admission-option">
-            <h3>Interactive Touch Pass</h3>
-            <p><strong>Ages 10+.</strong> All minors under the age of 18 <strong>MUST BE ACCOMPANIED WITH AN ADULT with a valid ID!</strong> Interactive Touch Pass is kid friendly and includes light touching such as messing with hair, head, ears, arms and neck. <strong>No inappropriate or harmful touching.</strong></p>
-        </div>
-        <div class="admission-option">
-            <h3>RATED R Pass</h3>
-            <p><strong>18+ ONLY.</strong> WARNING: DARK HUMOR, ADULT LANGUAGE and INTENSE CONTACT. Rated R Pass is our most intense admission option. This is a FULL contact touch experience. Includes safe intense full contact, adult language and dark humor. <strong>No inappropriate or harmful touching.</strong> <strong>IF YOU ARE SENSITIVE OR EASILY OFFENDED THIS UPGRADE IS NOT RECOMMENDED.</strong> Rated R Pass participants cannot enter the attraction in a group with guests who do not have Rated R Passes.</p>
-        </div>
-        <div class="admission-option">
-            <h3>Terror Pass</h3>
-            <p>Includes: <strong>Fast Pass + Choice of Interactive Touch Pass or Rated R Pass.</strong></p>
-        </div>
-        <div class="admission-option">
-            <h3>VIP Terror Pass</h3>
-            <p>Includes: <strong>Front of Line + Choice of Interactive Touch Pass or Rated R Pass + VIP gift + VIP Lanyard.</strong></p>
-        </div>
-    </div>
 
     <div class="ticket-intro">
-        <p class="important-text">A Valid ID must be presented at check-in for all INTERACTIVE TOUCH PASS and RATED R PASS participants.</p>
-        <p>Rated R Pass participants cannot enter the attraction in a group with guests who do not have Rated R Passes. General Admission and Touch Pass guests may go together.</p>
-        <p class="warning-text">All sales are final! No refunds. No exceptions. Open Rain or Shine!</p>
-        <p class="important-text">Tickets are valid any open night during our 2026 Halloween Season ending Nov 1!</p>
+
+      <h3>
+        Choose Your Christmas Experience!
+      </h3>
+
+      <p>
+        Whether you're looking for a magical
+        family evening or a terrifying
+        Christmas nightmare, we've got
+        an experience waiting for you.
+      </p>
+
+      <p class="admission-notice">
+        <strong>PLEASE NOTE:</strong>
+        Admission options are subject to change
+        for off-season and special events.
+        Certain admission options may be
+        unavailable, modified, or replaced
+        depending on the event.
+        Please review event-specific ticket
+        information before purchasing.
+      </p>
+
     </div>
 
-    <div style="text-align:center">
-        <a class="button" href="https://www.simpletix.com/e/santa-slaughterhaus-a-holiday-horror-exper-tickets-301332" target="_blank" rel="noopener">BUY TICKETS NOW</a>
-    </div>
-</section>
+    <div class="ticket-event-grid">
 
-<!-- WARNING -->
-<section class="warning-section" id="warning">
+      <div class="ticket-event-card magic-ticket">
+
+        <h3>NOT SO SCARY CHRISTMAS</h3>
+
+        <p>
+          December 11 &amp; 18
+        </p>
+
+        <p>
+          General Admission $12
+        </p>
+
+        <p>
+          Children 3 &amp; under FREE
+        </p>
+
+        <p>
+          Christmas Market FREE to visit
+        </p>
+
+        <a
+          href="https://terroronroute66.simpletix.com/"
+          class="button green"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BUY TICKETS
+        </a>
+
+      </div>
+
+      <div class="ticket-event-card">
+
+        <h3>SANTA'S SLAUGHTERHAUS</h3>
+
+        <p>
+          December 12 &amp; 19
+        </p>
+
+        <p>
+          Multiple admission options
+          and intensity levels available.
+        </p>
+
+        <p>
+          Limited tickets available.
+          Once they're gone, they're gone!
+        </p>
+
+        <a
+          href="https://terroronroute66.simpletix.com/"
+          class="button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BUY TICKETS
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="center">
+
+      <a
+        href="https://terroronroute66.simpletix.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="buyTicketNow.png"
+          alt="Buy Tickets Now"
+          style="width:300px;max-width:80%;height:auto;"
+        >
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- WARNING -->
+
+  <section id="warning" class="warning-section">
+
     <h2>WARNING!</h2>
+
     <div class="warning-box">
-        <h3>ENTER AT YOUR OWN RISK</h3>
-        <ul>
-            <li>All participants must complete a waiver before entering the attraction.</li>
-            <li>Interactive Touch Pass participants must be age 10 or older.</li>
-            <li>Minors under 18 must be accompanied by an adult with valid ID for Interactive Touch Pass.</li>
-            <li>Rated R Pass is strictly for guests age 18+.</li>
-            <li>Valid ID is required at check-in for Interactive Touch Pass and Rated R Pass participants.</li>
-            <li>Rated R participants cannot enter in a group with guests who do not have Rated R Passes.</li>
-            <li>Rated R includes intense contact, adult language and dark humor.</li>
-            <li>No inappropriate or harmful touching is permitted.</li>
-            <li>If you are sensitive or easily offended, the Rated R upgrade is not recommended.</li>
-            <li>The attraction is open rain or shine unless otherwise announced.</li>
-        </ul>
-        <img src="rules2026.png" alt="Terror On Route 66 Rules" class="rules-image">
-        <a class="waiver-link" href="waiver2026.pdf" target="_blank" rel="noopener">VIEW 2026 WAIVER</a>
+
+      <h3>ENTER AT YOUR OWN RISK!</h3>
+
+      <p class="warning-text">
+        Terror On Route 66 is an intense
+        haunted attraction.
+      </p>
+
+      <p>
+        Certain experiences may contain
+        frightening scenes, loud noises,
+        darkness, strobe lighting,
+        fog effects, intense performances,
+        and mature content.
+      </p>
+
+      <p>
+        Interactive Touch and Rated R
+        admission options may include
+        additional contact and content.
+        Guests must follow all applicable
+        age restrictions and requirements.
+      </p>
+
+      <ul>
+
+        <li>
+          Follow all instructions from
+          attraction staff.
+        </li>
+
+        <li>
+          Do not touch actors or props
+          unless expressly permitted
+          as part of your experience.
+        </li>
+
+        <li>
+          No running, pushing, or
+          intentionally unsafe behavior.
+        </li>
+
+        <li>
+          Guests who appear intoxicated
+          or behave dangerously may
+          be refused admission.
+        </li>
+
+        <li>
+          Interactive and Rated R
+          participants must complete
+          the required waiver.
+        </li>
+
+        <li>
+          Rated R admission requires
+          guests to be at least 18 years old
+          with valid identification.
+        </li>
+
+      </ul>
+
+      <img
+        src="rules2026.png"
+        alt="Terror On Route 66 Rules and Warnings"
+        class="rules-image"
+      >
+
+      <a
+        href="waiver2026.pdf"
+        class="waiver-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        VIEW PARTICIPANT WAIVER
+      </a>
+
+      <p>
+        Please read all event-specific
+        admission requirements before
+        purchasing tickets.
+      </p>
+
+      <a
+        href="waiver2026.pdf"
+        class="waiver-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        READ THE WAIVER
+      </a>
+
     </div>
-</section>
 
-<!-- SCHEDULE -->
-<section class="schedule-section" id="schedule">
-    <h2>SCHEDULE</h2>
-</section>
+  </section>
 
-<!-- DIRECTIONS -->
-<section class="directions-section" id="directions">
+  <!-- DIRECTIONS -->
+
+  <section id="directions" class="directions-section">
+
     <h2>DIRECTIONS</h2>
-    <p class="address">Terror On Route 66<br>1143 North Service Road West<br>Sullivan, Missouri 63080</p>
+
+    <p class="address">
+      1143 North Service Road West<br>
+      Sullivan, Missouri 63080
+    </p>
+
     <div class="map-container">
-        <iframe src="https://www.google.com/maps?q=1143+North+Service+Road+West,+Sullivan,+MO+63080&output=embed" loading="lazy" title="Location Map" allowfullscreen></iframe>
-    </div>
-    <div style="text-align:center">
-        <a class="button" href="https://www.google.com/maps/dir/?api=1&destination=1143+North+Service+Road+West,+Sullivan,+MO+63080" target="_blank" rel="noopener">GET DIRECTIONS</a>
-    </div>
-</section>
 
-<!-- JOBS -->
-<section class="jobs-section" id="jobs">
-    <h2>JOBS</h2>
-    <div class="jobs-box">
-        <h3>JOIN THE TERROR</h3>
-        <p>Think you've got what it takes to be part of the Terror On Route 66 team?</p>
-        <p>We're looking for dedicated actors, crew members and behind-the-scenes team members who love Halloween, horror and creating unforgettable experiences.</p>
-        <p>If you're reliable, energetic, hardworking and ready to become part of the TERROR, we'd love to have you join our team!</p>
-        <p>Complete our application to get started.</p>
-        <a class="button" href="https://forms.gle/6EXhDoS24TRTfp8Z7" target="_blank" rel="noopener">APPLY NOW</a>
-    </div>
-</section>
+      <iframe
+        title="Map to Terror On Route 66"
+        src="https://www.google.com/maps?q=1143+North+Service+Road+West+Sullivan+MO+63080&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
 
-<!-- VENDORS -->
-<section class="jobs-section" id="vendors">
+    </div>
+
+    <div class="center">
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=1143+North+Service+Road+West+Sullivan+MO+63080"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GET DIRECTIONS
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- JOBS -->
+
+  <section id="jobs" class="jobs-section">
+
+    <h2>JOIN OUR TEAM</h2>
+
+    <div class="info-box">
+
+      <h3>DO YOU HAVE WHAT IT TAKES?</h3>
+
+      <p>
+        Terror On Route 66 is always
+        looking for passionate, creative,
+        and dedicated individuals
+        to join our team.
+      </p>
+
+      <p>
+        From acting and makeup to
+        operations and guest services,
+        there are opportunities to
+        become part of the madness.
+      </p>
+
+      <a
+        href="https://forms.gle/6EXhDoS24TRTfp8Z7"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        APPLY NOW
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- VENDORS -->
+
+  <section id="vendors" class="vendors-section">
+
     <h2>VENDORS</h2>
-    <div class="jobs-box">
-        <h3>BECOME A VENDOR</h3>
-        <p>Thank you for your interest in being a vendor at Terror On Route 66!</p>
-        <p>We are now accepting vendor applications for our 2026 Season! Participants are encouraged to have Halloween, gothic, oddities, spooky style items but it is NOT required. Vendors are prohibited from selling alcohol, tobacco, products containing cannabis/THC or illegal substances.</p>
-        <p>Vendor fee is $25 per weekend and a payment link will be sent to the email you provide in this form. Vendor fees are non-refundable. If you are interested in reserving a full season spot, please email us! Your vendor slot will be reserved once payment is received.</p>
-        <p>Set up is between 5:30-6:30PM. Spaces are limited and first come first serve. Average booth space is 10x10. Vendors may purchase more than one booth space if needed. Vendors are responsible for their own booth setup including tables, chairs, tents and additional lighting. We do not provide electric or water.</p>
-        <p><strong>FOOD VENDORS:</strong> Vendors selling food will have a different vendor fee. Please email us in addition to completing the vendor application to check availability and pricing.</p>
-        <p>Advertisement on our Facebook page is available for an additional fee!</p>
-        <p>By participating in events hosted by Terror On Route 66, you agree to the following: Vendors are responsible for their own property, equipment, merchandise, and any risks involved. Terror On Route 66 is not liable for any loss, theft, damage, or injury. Vendors release Terror On Route 66 from any claims, damages, or expenses that may arise during the event.</p>
-        <p>Vendor questions can be directed to <a href="mailto:terror.on.66@gmail.com">terror.on.66@gmail.com</a>.</p>
-        <p>Please send your logo to the email address above for a Facebook shout out.</p>
-        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeHLLpWYLIKumwNecCE0fF7o_VA8XVfNnT212CRXZdlLOz7Rg/viewform?usp=header" target="_blank" rel="noopener">VENDOR APPLICATION</a>
+
+    <div class="info-box">
+
+      <h3>BECOME A VENDOR!</h3>
+
+      <p>
+        Interested in joining us
+        as a vendor at Terror On Route 66?
+      </p>
+
+      <p>
+        Our vendor opportunities are
+        a great way to showcase your
+        products and connect with guests.
+      </p>
+
+      <p>
+        <strong>Vendor Fee:</strong>
+        $25 per weekend
+      </p>
+
+      <p>
+        <strong>Space:</strong>
+        Approximately 10' × 10'
+      </p>
+
+      <p>
+        <strong>Setup:</strong>
+        5:30 PM – 6:30 PM
+      </p>
+
+      <p>
+        Vendor spaces are first-come,
+        first-served. Fees are non-refundable.
+        Multiple booths may be requested.
+      </p>
+
+      <p>
+        No alcohol, tobacco, or THC
+        products permitted.
+      </p>
+
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeHLLpWYLIKumwNecCE0fF7o_VA8XVfNnT212CRXZdlLOz7Rg/viewform?usp=header"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        VENDOR APPLICATION
+      </a>
+
     </div>
-</section>
 
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-    <h2>CONTACT</h2>
-    <img src="logo.png" alt="Terror On Route 66" class="contact-logo">
-    <p>Terror On Route 66<br>1143 North Service Road West<br>Sullivan, Missouri 63080<br><strong>(573) 617-7424</strong></p>
-    <p>Follow us on social media for current operating dates, announcements and updates.</p>
-    <div style="text-align:center">
-        <a class="button" href="https://www.facebook.com/TerrorOnRoute66/" target="_blank" rel="noopener">FACEBOOK</a>
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact-section">
+
+    <h2>CONTACT US</h2>
+
+    <img
+      src="logo.png"
+      alt="Terror On Route 66"
+      class="contact-logo"
+    >
+
+    <p>
+      Have questions about tickets,
+      events, employment, or vendors?
+      We'd love to hear from you!
+    </p>
+
+    <p>
+      <strong>PHONE:</strong><br>
+      <a href="tel:+15736177424">
+        (573) 617-7424
+      </a>
+    </p>
+
+    <p>
+      <strong>EMAIL:</strong><br>
+      <a href="mailto:terror.on.66@gmail.com">
+        terror.on.66@gmail.com
+      </a>
+    </p>
+
+    <div class="center">
+
+      <a
+        href="https://www.facebook.com/TerrorOnRoute66/"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        FOLLOW US ON FACEBOOK
+      </a>
+
     </div>
-</section>
 
-</main>
+  </section>
 
-<footer>
-    <p>© 2026 Terror On Route 66. All Rights Reserved.</p>
-    <p>Get TERRORfied.</p>
-</footer>
+  <!-- FOOTER -->
 
-<script>
-const intro=document.getElementById("intro");
-const bells=document.getElementById("bellsAudio");
-const enterButton=document.getElementById("enterButton");
-const skipButton=document.getElementById("skipButton");
-const soundToggle=document.getElementById("soundToggle");
+  <footer>
 
-let introSoundOn=true;
-let videoSoundOn=false;
+    <p>
+      © 2026 Terror On Route 66.
+      All Rights Reserved.
+    </p>
 
-function createSnow(container,count){
-    const fragment=document.createDocumentFragment();
-    for(let i=0;i<count;i++){
-        const flake=document.createElement("i");
-        flake.className="snowflake";
-        flake.style.setProperty("--x",Math.random()*100+"%");
-        flake.style.setProperty("--size",(2+Math.random()*5)+"px");
-        flake.style.setProperty("--opacity",(0.25+Math.random()*.65).toFixed(2));
-        flake.style.setProperty("--duration",(7+Math.random()*11)+"s");
-        flake.style.setProperty("--delay",(-Math.random()*18)+"s");
-        flake.style.setProperty("--drift",(-90+Math.random()*180)+"px");
+    <div class="footer-tagline">
+      Get TERRORfied.
+    </div>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    const intro = document.getElementById("intro");
+    const bells = document.getElementById("bellsAudio");
+
+    const skipButton =
+      document.getElementById("skipButton");
+
+    const soundToggle =
+      document.getElementById("soundToggle");
+
+    let introSoundOn = true;
+    let videoSoundOn = false;
+
+    const prefersReducedMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+    /* SNOW */
+
+    function createSnow(container, count) {
+
+      if (!container) return;
+
+      const fragment =
+        document.createDocumentFragment();
+
+      for (let i = 0; i < count; i++) {
+
+        const flake =
+          document.createElement("i");
+
+        flake.className = "snowflake";
+
+        flake.style.setProperty(
+          "--x",
+          Math.random() * 100 + "%"
+        );
+
+        flake.style.setProperty(
+          "--size",
+          (2 + Math.random() * 5) + "px"
+        );
+
+        flake.style.setProperty(
+          "--opacity",
+          (0.25 + Math.random() * .65).toFixed(2)
+        );
+
+        flake.style.setProperty(
+          "--duration",
+          (7 + Math.random() * 11) + "s"
+        );
+
+        flake.style.setProperty(
+          "--delay",
+          (-Math.random() * 18) + "s"
+        );
+
+        flake.style.setProperty(
+          "--drift",
+          (-90 + Math.random() * 180) + "px"
+        );
+
         fragment.appendChild(flake);
+      }
+
+      container.appendChild(fragment);
     }
-    container.appendChild(fragment);
-}
 
-if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-    createSnow(document.getElementById("introSnow"),85);
-    createSnow(document.getElementById("siteSnow"),40);
-}
+    if (!prefersReducedMotion) {
 
-function openHomepage(playBells){
-    if(playBells&&introSoundOn){
-        bells.volume=.65;
-        bells.currentTime=0;
-        const playback=bells.play();
-        if(playback&&typeof playback.catch==="function"){
-            playback.catch(error=>{
-                console.warn("Sleigh bells could not play:",error);
-            });
+      createSnow(
+        document.getElementById("introSnow"),
+        85
+      );
+
+      createSnow(
+        document.getElementById("siteSnow"),
+        40
+      );
+
+    }
+
+    /* INTRO SESSION MEMORY */
+
+    let introAlreadySeen = false;
+
+    try {
+      introAlreadySeen =
+        sessionStorage.getItem(
+          "terrorChristmasIntroSeen2026"
+        ) === "yes";
+    } catch (error) {
+      introAlreadySeen = false;
+    }
+
+    function markIntroSeen() {
+
+      try {
+        sessionStorage.setItem(
+          "terrorChristmasIntroSeen2026",
+          "yes"
+        );
+      } catch (error) {
+        // Website continues normally.
+      }
+
+    }
+
+    function hideIntro() {
+
+      intro.classList.add("is-hidden");
+      intro.hidden = true;
+
+      document.body.classList.remove(
+        "intro-active"
+      );
+
+      markIntroSeen();
+    }
+
+    function playSleighBells() {
+
+      if (!introSoundOn) return;
+
+      bells.volume = .65;
+      bells.currentTime = 0;
+
+      const playback = bells.play();
+
+      if (
+        playback &&
+        typeof playback.catch === "function"
+      ) {
+        playback.catch(() => {});
+      }
+
+    }
+
+    function enterExperience(targetId) {
+
+      playSleighBells();
+      hideIntro();
+
+      if (targetId) {
+
+        const destination =
+          document.getElementById(targetId);
+
+        if (destination) {
+
+          destination.scrollIntoView({
+            behavior: prefersReducedMotion
+              ? "auto"
+              : "smooth",
+            block: "start"
+          });
+
         }
-    }
-    intro.classList.add("is-hidden");
-    intro.hidden=true;
-    document.body.classList.remove("intro-active");
-    window.scrollTo(0,0);
-}
 
-enterButton.addEventListener("click",()=>openHomepage(true));
-skipButton.addEventListener("click",()=>openHomepage(false));
+      } else {
 
-soundToggle.addEventListener("click",()=>{
-    introSoundOn=!introSoundOn;
-    soundToggle.textContent=introSoundOn?"🔊 Intro sound: ON":"🔇 Intro sound: OFF";
-    soundToggle.setAttribute("aria-label",introSoundOn?"Mute sleigh bells":"Unmute sleigh bells");
-    if(!introSoundOn){bells.pause();}
-});
+        window.scrollTo({
+          top: 0,
+          behavior: "auto"
+        });
 
-function toggleSound(){
-    const iframe=document.getElementById("terrorVideo");
-    const button=document.getElementById("soundButton");
-    if(!iframe.contentWindow)return;
+      }
 
-    const command=videoSoundOn?"mute":"unMute";
-    iframe.contentWindow.postMessage(JSON.stringify({
-        event:"command",func:command,args:[]
-    }),"https://www.youtube.com");
-
-    if(!videoSoundOn){
-        iframe.contentWindow.postMessage(JSON.stringify({
-            event:"command",func:"playVideo",args:[]
-        }),"https://www.youtube.com");
     }
 
-    videoSoundOn=!videoSoundOn;
-    button.textContent=videoSoundOn?"🔊":"🔇";
-    button.setAttribute("aria-label",videoSoundOn?"Turn video sound off":"Turn video sound on");
-}
+    /* INTRO BUTTONS */
 
-document.fonts.load('32px "Terror From Midnight"').catch(()=>{
-    console.warn("Custom Enter button font could not be loaded.");
-});
-</script>
+    document.querySelectorAll(
+      "[data-intro-target]"
+    ).forEach(button => {
+
+      button.addEventListener(
+        "click",
+        function() {
+
+          enterExperience(
+            this.getAttribute(
+              "data-intro-target"
+            )
+          );
+
+        }
+      );
+
+    });
+
+    skipButton.addEventListener(
+      "click",
+      function() {
+
+        enterExperience(null);
+
+      }
+    );
+
+    /* HIDE INTRO IF ALREADY SEEN */
+
+    if (introAlreadySeen) {
+
+      intro.classList.add("is-hidden");
+      intro.hidden = true;
+
+      document.body.classList.remove(
+        "intro-active"
+      );
+
+    }
+
+    /* INTRO SOUND CONTROL */
+
+    soundToggle.addEventListener(
+      "click",
+      function() {
+
+        introSoundOn = !introSoundOn;
+
+        soundToggle.textContent =
+          introSoundOn
+            ? "🔊 Intro sound: ON"
+            : "🔇 Intro sound: OFF";
+
+        soundToggle.setAttribute(
+          "aria-label",
+          introSoundOn
+            ? "Mute sleigh bells"
+            : "Unmute sleigh bells"
+        );
+
+        if (!introSoundOn) {
+          bells.pause();
+        }
+
+      }
+    );
+
+    /* VIDEO SOUND CONTROL */
+
+    function toggleSound() {
+
+      const iframe =
+        document.getElementById(
+          "terrorVideo"
+        );
+
+      const button =
+        document.getElementById(
+          "soundButton"
+        );
+
+      if (
+        !iframe ||
+        !iframe.contentWindow
+      ) return;
+
+      const command =
+        videoSoundOn
+          ? "mute"
+          : "unMute";
+
+      iframe.contentWindow.postMessage(
+        JSON.stringify({
+          event: "command",
+          func: command,
+          args: []
+        }),
+        "https://www.youtube.com"
+      );
+
+      if (!videoSoundOn) {
+
+        iframe.contentWindow.postMessage(
+          JSON.stringify({
+            event: "command",
+            func: "playVideo",
+            args: []
+          }),
+          "https://www.youtube.com"
+        );
+
+      }
+
+      videoSoundOn = !videoSoundOn;
+
+      button.textContent =
+        videoSoundOn ? "🔊" : "🔇";
+
+      button.setAttribute(
+        "aria-label",
+        videoSoundOn
+          ? "Turn video sound off"
+          : "Turn video sound on"
+      );
+
+    }
+
+    /* CUSTOM FONT */
+
+    if (document.fonts) {
+
+      document.fonts.load(
+        '32px "Terror From Midnight"'
+      ).catch(() => {});
+
+    }
+
+  </script>
 
 </body>
 </html>
